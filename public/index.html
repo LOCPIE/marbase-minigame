@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Chiến Trường MarBase - Minigame 10 Người</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ink Blind Overlay -->
+  <canvas id="ink-canvas"></canvas>
+  <div id="ink-hint" class="ink-hint" style="display:none;">🐙 Bạn bị dính mực! Chà ngón tay lau sạch màn hình!</div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Floating Reactions Layer (Cà khịa bay màn hình) -->
+  <div id="floating-reactions-layer" class="floating-reactions-layer"></div>
+
+  <!-- App Wrapper (Mobile Viewport Optimized) -->
+  <div id="app">
+    
+    <!-- Top Header Bar -->
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-icon">⚡</span>
+      </div>
+      <div class="header-actions">
+        <button id="btn-leaderboard-modal" class="icon-btn" title="Bảng Xếp Hạng">🏆</button>
+        <button id="btn-skill-history-modal" class="icon-btn" title="Lịch Sử Dùng Kỹ Năng">⚔️</button>
+        <button id="btn-all-skills-modal" class="icon-btn" title="20 Kỹ Năng">📜</button>
+        <button id="btn-sound-toggle" class="icon-btn" title="Âm thanh">🔊</button>
+      </div>
+    </header>
+
+    <!-- Main Views Frame -->
+    <main class="view-container">
+
+      <!-- VIEW 1: HOME (Lobby Join/Create) -->
+      <section id="view-home" class="view active">
+        <div class="home-hero">
+          <h1 class="hero-title">CHIẾN TRƯỜNG<br><span style="color:var(--neon-cyan)">MARBASE</span></h1>
+          <p class="hero-subtitle">Thi thố mẹo hài hước, tích nộ & lật ngược tình thế với 20 kỹ năng siêu bựa!</p>
+        </div>
+
+        <div class="glass-card">
+          <label class="avatar-picker-label">Chọn Avatar của bạn:</label>
+          <div class="avatar-grid">
+            <div class="avatar-item selected" data-avatar="😎">😎</div>
+            <div class="avatar-item" data-avatar="🤠">🤠</div>
+            <div class="avatar-item" data-avatar="🐱">🐱</div>
+            <div class="avatar-item" data-avatar="🦄">🦄</div>
+            <div class="avatar-item" data-avatar="🤖">🤖</div>
+            <div class="avatar-item" data-avatar="🦊">🦊</div>
+            <div class="avatar-item" data-avatar="🐸">🐸</div>
+            <div class="avatar-item" data-avatar="🦁">🦁</div>
+            <div class="avatar-item" data-avatar="🐼">🐼</div>
+            <div class="avatar-item" data-avatar="🥷">🥷</div>
+            <div class="avatar-item" data-avatar="👻">👻</div>
+            <div class="avatar-item" data-avatar="👽">👽</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="player-name">Tên hiển thị:</label>
+            <input type="text" id="player-name" class="form-input" placeholder="Nhập biệt danh của bạn..." maxlength="15">
+          </div>
+
+          <button id="btn-create-room" class="btn btn-primary" style="width:100%; margin-bottom:12px; font-weight:900;">
+            <span>👑</span> TẠO PHÒNG (LÀM HOST TRẬN ĐẤU)
+          </button>
+
+          <div style="display:flex; align-items:center; gap:8px; margin: 12px 0;">
+            <div style="flex:1; height:1px; background:var(--bg-card-border);"></div>
+            <span style="font-size:0.75rem; color:var(--text-muted); font-weight:700;">HOẶC VÀO PHÒNG CÓ SẴN</span>
+            <div style="flex:1; height:1px; background:var(--bg-card-border);"></div>
+          </div>
+
+          <div class="form-group">
+            <input type="text" id="room-code-input" class="form-input" placeholder="Nhập mã phòng 4 ký tự..." style="text-transform:uppercase; letter-spacing:2px; font-weight:800; text-align:center;">
+          </div>
+
+          <button id="btn-join-room" class="btn btn-secondary" style="width:100%;">
+            <span>🚀</span> THAM GIA PHÒNG
+          </button>
+        </div>
+
+        <div style="font-size:0.8rem; color:var(--text-muted); text-align:center; padding-bottom:10px;">
+          ⏱️ Mỗi câu 15s • 100đ đổ xuống • 20 kỹ năng ngẫu nhiên
+        </div>
+      </section>
+
+      <!-- VIEW 2: LOBBY (Waiting Room) -->
+      <section id="view-lobby" class="view">
+        <div class="lobby-header">
+          <div style="font-size:0.85rem; color:var(--text-muted); font-weight:700; margin-bottom:4px;">MÃ PHÒNG CHƠI</div>
+          <div class="room-code-badge">
+            <span id="lobby-room-code">----</span>
+          </div>
+          <div id="lobby-role-tag" style="margin-top:6px; font-size:0.85rem; font-weight:800;">
+            <!-- Dynamic Role Tag -->
+          </div>
+          <div style="font-size:0.85rem; color:var(--neon-cyan); margin-top:2px;">
+            Chia sẻ mã phòng cho bạn bè (Tối đa 10 người)
+          </div>
+        </div>
+
+        <div class="glass-card" style="flex:1; display:flex; flex-direction:column;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <span style="font-weight:800; font-size:1rem;">Danh sách người chơi</span>
+            <span id="lobby-player-count" style="font-weight:800; color:var(--neon-cyan);">1/10</span>
+          </div>
+
+          <div id="lobby-player-list" class="player-list">
+            <!-- Dynamic players -->
+          </div>
+
+          <div id="host-controls" style="margin-top:auto; display:none;">
+            <div style="display:flex; gap:8px; margin-bottom:10px;">
+              <button id="btn-add-bot" class="btn btn-outline" style="flex:1;">
+                <span>🤖</span> Thêm AI Bot
+              </button>
+              <button id="btn-leave-lobby" class="btn btn-outline btn-danger" style="width:48px;" title="Rời phòng">
+                🚪
+              </button>
+            </div>
+            <button id="btn-start-game" class="btn btn-primary" style="width:100%; font-size:1.05rem; font-weight:900; padding:13px; box-shadow:0 0 16px rgba(0,245,212,0.4);">
+              <span>🔥</span> BẮT ĐẦU TRẬN ĐẤU (HOST)
+            </button>
+          </div>
+
+          <div id="guest-waiting-box" style="margin-top:auto; display:none; text-align:center; padding:12px 10px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-md);">
+            <div style="font-size:1.2rem; margin-bottom:4px;">⏳</div>
+            <div style="font-weight:800; color:var(--neon-gold); font-size:0.9rem;">Đang đợi Chủ phòng bấm bắt đầu...</div>
+            <div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">Hãy sẵn sàng khởi tranh!</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 3: GAMEPLAY SCREEN -->
+      <section id="view-game" class="view">
+        
+        <!-- Top Stats Bar -->
+        <div class="game-top-bar">
+          <div class="question-counter">
+            CÂU <span id="q-current-index">1</span>/<span id="q-total">20</span>
+          </div>
+          <button id="btn-host-skip-q" class="btn btn-outline" style="display:none; padding:4px 8px; font-size:0.75rem; border-color:var(--neon-gold); color:var(--neon-gold); font-weight:800; border-radius:6px;" title="Chủ phòng chuyển sang kết quả câu">
+            <span>👑 Tiếp câu ➡️</span>
+          </button>
+          <div class="score-badge" id="my-score-display">
+            0đ
+          </div>
+        </div>
+
+        <!-- Special Event / Golden / Sudden Death Banner -->
+        <div id="game-event-banner-container" class="game-event-banner-wrapper"></div>
+
+        <!-- Fury Bar (Điểm Nộ) -->
+        <div class="fury-container" id="fury-container-box">
+          <span class="fury-label">⚡ NỘ:</span>
+          <div class="fury-slots">
+            <div class="fury-slot"></div>
+            <div class="fury-slot"></div>
+            <div class="fury-slot"></div>
+          </div>
+          <span style="font-size:0.75rem; color:var(--text-muted); font-weight:700;">Đủ 3 nộ mở kỹ năng (3 câu đầu đúng/sai đều +1 nộ)</span>
+        </div>
+
+        <!-- 30s Dynamic Timer Bar -->
+        <div class="timer-wrapper">
+          <div class="timer-bar-bg">
+            <div id="timer-bar-fill" class="timer-bar-fill"></div>
+          </div>
+          <div class="timer-text-overlay">
+            <span id="timer-live-points" style="color:var(--neon-gold); font-weight:800;">Điểm nhận: 100đ</span>
+            <span id="timer-seconds" style="color:var(--neon-cyan); font-weight:900;">15s</span>
+          </div>
+        </div>
+
+        <!-- Question Box -->
+        <div class="question-card">
+          <div id="question-text" class="question-text">
+            Đang tải câu hỏi mẹo...
+          </div>
+        </div>
+
+        <!-- Options Grid (A, B, C, D) -->
+        <div id="options-grid" class="options-grid">
+          <!-- Dynamic Buttons -->
+        </div>
+
+        <!-- Host Live Response Tracker (Chỉ hiện cho MC / Host) -->
+        <div id="host-live-tracker" style="display:none; margin:10px 0; padding:10px; background:rgba(15, 23, 42, 0.85); border:1px solid rgba(255, 183, 3, 0.4); border-radius:var(--radius-md);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <span style="font-size:0.8rem; font-weight:900; color:var(--neon-gold);">👑 TIẾN ĐỘ TRẢ LỜI CỦA NGƯỜI CHƠI:</span>
+            <span id="host-answer-progress" style="font-size:0.8rem; font-weight:900; color:var(--neon-cyan);">0/0</span>
+          </div>
+          <div id="host-player-answer-list" style="display:flex; flex-wrap:wrap; gap:6px;"></div>
+        </div>
+
+        <!-- Reveal Explanation Card -->
+        <div id="explanation-box" class="explanation-box" style="display:none;"></div>
+
+        <!-- Skills Inventory Bar -->
+        <div class="skills-bar" id="player-skills-bar">
+          <div class="skills-bar-title">
+            <span>KỸ NĂNG CỦA BẠN (Chạm để dùng):</span>
+            <span style="color:var(--neon-cyan);">Tối đa 3</span>
+          </div>
+          <div id="skills-list" class="skills-scroll">
+            <!-- Dynamic skill chips -->
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW: RACETRACK LEADERBOARD (Đường Đua Siêu Tốc) -->
+      <section id="view-racetrack" class="view">
+        <div class="racetrack-header">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="font-size:22px;">🏎️</span>
+              <span style="font-weight:900; font-size:1.15rem; color:var(--neon-cyan);">ĐƯỜNG ĐUA SIÊU TỐC</span>
+            </div>
+            <div id="racetrack-timer-badge" class="score-badge" style="background:rgba(0, 245, 212, 0.15); border-color:var(--neon-cyan);">
+              Tiếp: <span id="racetrack-countdown">7s</span>
+            </div>
+          </div>
+          
+          <!-- Special Event / Golden / Sudden Death Banner -->
+          <div id="racetrack-event-banner-container" class="game-event-banner-wrapper"></div>
+
+          <!-- Answer Mini Recap -->
+          <div id="racetrack-answer-recap" class="racetrack-recap-box">
+            <!-- Correct answer & explanation -->
+          </div>
+
+          <!-- Host Next Question Control Bar -->
+          <div id="host-racetrack-bar" style="display:none; margin-top:10px;">
+            <button id="btn-host-next-q" class="btn btn-primary" style="width:100%; font-weight:900; font-size:1rem; padding:12px; background:linear-gradient(135deg, #00f5d4 0%, #ffb703 100%); color:#000; border:none; box-shadow:0 0 16px rgba(0,245,212,0.45); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center; gap:8px;">
+              <span>👑</span> <span id="host-next-btn-text">CÂU HỎI TIẾP THEO ➡️</span>
+            </button>
+          </div>
+
+          <!-- Guest Waiting Notice -->
+          <div id="guest-racetrack-bar" style="display:none; margin-top:8px; text-align:center; padding:8px; background:rgba(255, 183, 3, 0.1); border:1px solid rgba(255, 183, 3, 0.25); border-radius:var(--radius-md);">
+            <span style="font-size:0.8rem; font-weight:800; color:var(--neon-gold);">⏳ Đang đợi Chủ phòng (Host) bấm chuyển câu tiếp theo...</span>
+          </div>
+        </div>
+
+        <!-- The Race Track Field -->
+        <div class="racetrack-field-card">
+          <div class="track-finish-line">
+            <span>🏁 ĐÍCH (2000đ)</span>
+          </div>
+          <div id="racetrack-lanes" class="racetrack-lanes-container">
+            <!-- Dynamic racing lanes -->
+          </div>
+        </div>
+
+        <!-- Quick Skill Bar on Race Track -->
+        <div class="racetrack-skill-bar" id="racetrack-skill-bar">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="font-size:0.75rem; font-weight:800; color:var(--text-muted);">KỸ NĂNG CỦA BẠN:</span>
+              <button id="btn-quick-skill-history" class="icon-btn" style="width:24px; height:24px; font-size:12px;" title="Xem Lịch Sử Kỹ Năng">⚔️</button>
+            </div>
+            <span id="racetrack-fury-indicator" style="font-size:0.75rem; font-weight:800; color:var(--neon-orange);">⚡ Nộ: 0/3</span>
+          </div>
+          <div id="racetrack-permission-banner">
+            <!-- Dynamic eligibility banner -->
+          </div>
+          <div id="racetrack-skills-list" class="skills-scroll">
+            <!-- Dynamic skills with quick use -->
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 4: SKILL INTERMISSION PHASE (Sau 3 câu đầu) -->
+      <section id="view-skill-phase" class="view">
+        <div style="text-align:center; padding:16px 0;">
+          <div style="font-size:1.8rem; margin-bottom:4px;">🎁</div>
+          <h2 id="skill-phase-title" style="font-size:1.3rem; font-weight:900; color:var(--neon-cyan);">GIAI ĐOẠN DÙNG KỸ NĂNG</h2>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Tất cả người chơi đã được phát kỹ năng ngẫu nhiên!</p>
+          <div id="skill-phase-timer" style="font-size:2rem; font-weight:900; color:var(--neon-gold); margin-top:8px;">12s</div>
+        </div>
+
+        <div id="skill-phase-cards" style="flex:1; overflow-y:auto;">
+          <!-- Skill cards with ACTIVATE button -->
+        </div>
+      </section>
+
+      <!-- VIEW 5: VICTORY PODIUM / GAME OVER -->
+      <section id="view-ended" class="view">
+        <div style="text-align:center; padding:10px 0;">
+          <h2 style="font-size:1.8rem; font-weight:900; background:linear-gradient(135deg, #ffb703, #ff007f); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+            KẾT QUẢ CHUNG CUỘC
+          </h2>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Vinh danh các bậc thầy đấu trí!</p>
+        </div>
+
+        <!-- 3-Tier Podium -->
+        <div class="podium-container">
+          <!-- 2nd Place -->
+          <div class="podium-place" id="podium-p2">
+            <div class="podium-avatar">🥈</div>
+            <div class="podium-name">Top 2</div>
+            <div class="podium-score">0đ</div>
+            <div class="podium-block podium-2">2</div>
+          </div>
+
+          <!-- 1st Place (Champion) -->
+          <div class="podium-place" id="podium-p1">
+            <div class="podium-avatar">👑</div>
+            <div class="podium-name">Top 1</div>
+            <div class="podium-score">0đ</div>
+            <div class="podium-block podium-1">1</div>
+          </div>
+
+          <!-- 3rd Place -->
+          <div class="podium-place" id="podium-p3">
+            <div class="podium-avatar">🥉</div>
+            <div class="podium-name">Top 3</div>
+            <div class="podium-score">0đ</div>
+            <div class="podium-block podium-3">3</div>
+          </div>
+        </div>
+
+        <!-- 5 Funny MVP Awards Section -->
+        <div id="mvp-awards-section" class="mvp-awards-container">
+          <div style="font-weight:900; font-size:0.95rem; color:var(--neon-gold); text-align:center; margin-bottom:8px; display:flex; align-items:center; justify-content:center; gap:6px;">
+            <span>🎖️</span> <span>LỄ TRAO GIẢI & DANH HIỆU BỰA NHẤT</span> <span>🎖️</span>
+          </div>
+          <div id="mvp-awards-grid" class="mvp-awards-grid">
+            <!-- Dynamic MVP Cards -->
+          </div>
+        </div>
+
+        <!-- Full Ranking List -->
+        <div class="glass-card" style="flex:1; display:flex; flex-direction:column; overflow:hidden;">
+          <div style="font-weight:800; font-size:0.95rem; margin-bottom:10px;">Bảng Xếp Hạng Đầy Đủ</div>
+          <div id="final-rankings-list" style="overflow-y:auto; flex:1;">
+            <!-- Dynamic rows -->
+          </div>
+        </div>
+
+        <button id="btn-play-again" class="btn btn-primary" style="width:100%; margin-top:8px;">
+          <span>🔄</span> CHƠI VÁN MỚI
+        </button>
+      </section>
+
+    </main>
+
+    <!-- Floating Live Emote Reaction Bar (Thả icon cà khịa) -->
+    <div id="reaction-bar-container" class="reaction-bar-container">
+      <button class="reaction-btn" data-emoji="🤣" title="Cười ỉa">🤣</button>
+      <button class="reaction-btn" data-emoji="😭" title="Khóc thét">😭</button>
+      <button class="reaction-btn" data-emoji="🤡" title="Chúa hề">🤡</button>
+      <button class="reaction-btn" data-emoji="🤬" title="Cay cú">🤬</button>
+      <button class="reaction-btn" data-emoji="💥" title="Bùm nổ">💥</button>
+    </div>
+
+    <!-- Host Soundboard SFX Bar (Chỉ hiện cho MC / Host) -->
+    <div id="host-soundboard-bar" class="host-soundboard-bar" style="display:none;">
+      <span class="host-sfx-label">👑 ÂM THANH HOST:</span>
+      <button class="host-sfx-btn" data-sfx="applause" title="Vỗ tay cổ vũ">👏 Vỗ tay</button>
+      <button class="host-sfx-btn" data-sfx="alarm" title="Còi báo động">🚨 Báo động</button>
+      <button class="host-sfx-btn" data-sfx="crickets" title="Quạ kêu im ắng">🦗 Quạ kêu</button>
+      <button class="host-sfx-btn" data-sfx="fanfare" title="Kèn khải hoàn">🎺 Khải hoàn</button>
+    </div>
+
+    <!-- MODAL: TARGET SELECTOR -->
+    <div id="target-modal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">🎯 Chọn mục tiêu đối thủ</div>
+          <button id="btn-close-target-modal" class="icon-btn">✕</button>
+        </div>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">
+          Chọn 1 người chơi để áp dụng kỹ năng:
+        </p>
+        <div id="target-list" class="target-list">
+          <!-- Dynamic Opponents -->
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: ALL 20 SKILLS REFERENCE -->
+    <div id="all-skills-modal" class="modal-overlay">
+      <div class="modal-content" style="max-height:85vh;">
+        <div class="modal-header">
+          <div class="modal-title">📜 20 Kỹ Năng MarBase</div>
+          <button id="btn-close-skills-modal" class="icon-btn">✕</button>
+        </div>
+        <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:14px; line-height:1.4;">
+          20 kỹ năng được phân chia theo <b>4 bậc phẩm chất</b> với tỷ lệ mở ra khác nhau để đảm bảo sự cân bằng và kịch tính:
+        </div>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+
+          <!-- TIER: HUYỀN THOẠI (6%) -->
+          <div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; padding-bottom:4px; border-bottom:1px solid rgba(245, 158, 11, 0.3);">
+              <span class="rarity-badge rarity-badge-legendary" style="font-size:0.75rem;">🌟 HUYỀN THOẠI</span>
+              <span style="font-size:0.75rem; color:#fbbf24; font-weight:700;">Tỉ lệ xuất hiện: 6% (~2%/kỹ năng)</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div class="glass-card skill-card-legendary" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#fbbf24;">🔄 Hoán Đổi Càn Khôn</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Hoán đổi điểm số của mình với người Top 1! (Nếu đang Top 1 sẽ đổi ra ngẫu nhiên 1 kỹ năng khác).</div>
+              </div>
+              <div class="glass-card skill-card-legendary" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#fbbf24;">🤫 Cấm Ngôn Tam Kiệt</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Cấm 3 người đứng đầu bảng không được quyền trả lời trong 2 câu tiếp theo!</div>
+              </div>
+              <div class="glass-card skill-card-legendary" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#fbbf24;">🔀 Đổi Mệnh Thiên Cơ</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Tự động nhận trọn 100 điểm tuyệt đối ở câu tiếp theo mà không cần phải trả lời!</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TIER: SỬ THI (18%) -->
+          <div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; padding-bottom:4px; border-bottom:1px solid rgba(168, 85, 247, 0.3);">
+              <span class="rarity-badge rarity-badge-epic" style="font-size:0.75rem;">🔮 SỬ THI</span>
+              <span style="font-size:0.75rem; color:#c084fc; font-weight:700;">Tỉ lệ xuất hiện: 18% (~3.6%/kỹ năng)</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div class="glass-card skill-card-epic" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#c084fc;">🛡️ Khiên Thần Thánh</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Miễn nhiễm mọi kỹ năng xấu, bom hoặc trừ điểm từ người khác trong 3 câu tiếp theo.</div>
+              </div>
+              <div class="glass-card skill-card-epic" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#c084fc;">🦹 Bàn Tay Đạo Tặc</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Hút trộm ngay 30% số điểm của 1 đối thủ chỉ định chuyển về cho mình (tối đa 100đ).</div>
+              </div>
+              <div class="glass-card skill-card-epic" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#c084fc;">🪞 Gương Phản Chiếu</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Trong 3 câu tiếp theo, nếu có ai dùng kỹ năng xấu lên bạn, hiệu ứng sẽ dội ngược lại chính họ!</div>
+              </div>
+              <div class="glass-card skill-card-epic" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#c084fc;">💥 Đại Địa Chấn</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Gây rung chấn toàn phòng, trừ 25 điểm của TẤT CẢ đối thủ khác!</div>
+              </div>
+              <div class="glass-card skill-card-epic" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#c084fc;">💣 Bom Hẹn Giờ</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Gài bom vào đối thủ. Nếu câu tới họ trả lời sai hoặc hết giờ, bom nổ trừ 120 điểm!</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TIER: HIẾM (34%) -->
+          <div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; padding-bottom:4px; border-bottom:1px solid rgba(6, 182, 212, 0.3);">
+              <span class="rarity-badge rarity-badge-rare" style="font-size:0.75rem;">🔷 HIẾM</span>
+              <span style="font-size:0.75rem; color:#38bdf8; font-weight:700;">Tỉ lệ xuất hiện: 34% (~5.7%/kỹ năng)</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div class="glass-card skill-card-rare" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#38bdf8;">❄️ Đóng Băng Thời Gian</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Đóng băng 1 đối thủ bạn chọn trong 1 câu tới, khiến họ không thể bấm phím.</div>
+              </div>
+              <div class="glass-card skill-card-rare" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#38bdf8;">⚡ Gia Tốc Hoàng Kim</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">+50% số điểm nhận được cho 3 câu hỏi tiếp theo.</div>
+              </div>
+              <div class="glass-card skill-card-rare" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#38bdf8;">🎁 Hộp Quà Thần Bí</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">May rủi: Ngẫu nhiên nhận +150 điểm, hoặc 2 nộ, hoặc Khiên Thần Thánh 2 câu!</div>
+              </div>
+              <div class="glass-card skill-card-rare" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#38bdf8;">🧲 Nam Châm Hút Điểm</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Trong 2 câu tiếp theo, bạn được nhận 25% số điểm mà người đứng Top 1 kiếm được.</div>
+              </div>
+              <div class="glass-card skill-card-rare" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#38bdf8;">🎭 Kính Nhìn Trộm Top 1</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Trong 2 câu tiếp theo, bạn nhìn thấy ngay đáp án mà người Top 1 vừa chọn.</div>
+              </div>
+              <div class="glass-card skill-card-rare" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#38bdf8;">🎲 Cược Mạng Nhân Đôi</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Câu tiếp theo: Đúng nhận x2 điểm (tối đa 200đ), sai bị trừ 50 điểm!</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TIER: PHỔ THÔNG (42%) -->
+          <div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; padding-bottom:4px; border-bottom:1px solid rgba(16, 185, 129, 0.3);">
+              <span class="rarity-badge rarity-badge-common" style="font-size:0.75rem;">🟢 PHỔ THÔNG</span>
+              <span style="font-size:0.75rem; color:#34d399; font-weight:700;">Tỉ lệ xuất hiện: 42% (~7%/kỹ năng)</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div class="glass-card skill-card-common" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#34d399;">🎯 Mắt Đại Bàng 50/50</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Lập tức gạch bỏ 2 phương án sai ở câu tiếp theo, chỉ còn 2 lựa chọn.</div>
+              </div>
+              <div class="glass-card skill-card-common" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#34d399;">⏳ Bẻ Cong Thời Gian</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Tặng thêm cho bạn 15 giây đếm ngược riêng trong câu hỏi tiếp theo.</div>
+              </div>
+              <div class="glass-card skill-card-common" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#34d399;">🐙 Mực Bạch Tuộc Mù Mịt</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Phun mực đen che kín màn hình đối thủ, họ phải lấy ngón tay chà lau sạch mới đọc được đề!</div>
+              </div>
+              <div class="glass-card skill-card-common" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#34d399;">🌪️ Cơn Lốc Đảo Điên</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Làm màn hình đối thủ xoay ngược 180 độ và rung bần bật trong 10 giây đầu câu hỏi!</div>
+              </div>
+              <div class="glass-card skill-card-common" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#34d399;">🌀 Lú Lẫn Phím Bấm</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Xáo trộn ngẫu nhiên vị trí các nút A, B, C, D của đối thủ khiến họ dễ bấm nhầm!</div>
+              </div>
+              <div class="glass-card skill-card-common" style="margin-bottom:0; padding:12px;">
+                <div style="font-weight:800; color:#34d399;">🩸 Hiến Tế Cuồng Nộ</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Tự trừ 30 điểm của mình để lập tức bốc ngay 2 kỹ năng ngẫu nhiên mới!</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: LIVE LEADERBOARD (Bảng Xếp Hạng Trực Tiếp) -->
+    <div id="leaderboard-modal" class="modal-overlay">
+      <div class="modal-content" style="max-height:85vh;">
+        <div class="modal-header">
+          <div class="modal-title" style="display:flex; align-items:center; gap:8px;">
+            <span>🏆</span>
+            <span>BẢNG XẾP HẠNG</span>
+          </div>
+          <button id="btn-close-leaderboard-modal" class="icon-btn">✕</button>
+        </div>
+        <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">
+          Xếp hạng theo điểm số & trạng thái hiện tại:
+        </div>
+        <div id="live-leaderboard-list" style="display:flex; flex-direction:column; gap:8px; max-height:60vh; overflow-y:auto;">
+          <!-- Dynamic leaderboard rows -->
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: SKILL USAGE HISTORY (Lịch Sử Dùng Kỹ Năng) -->
+    <div id="skill-history-modal" class="modal-overlay">
+      <div class="modal-content" style="max-height:85vh;">
+        <div class="modal-header">
+          <div class="modal-title" style="display:flex; align-items:center; gap:8px;">
+            <span>⚔️</span>
+            <span>LỊCH SỬ DÙNG KỸ NĂNG</span>
+          </div>
+          <button id="btn-close-skill-history-modal" class="icon-btn">✕</button>
+        </div>
+        <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">
+          Toàn bộ kỹ năng đã kích hoạt và kết quả tác động trong trận đấu:
+        </div>
+        <div id="skill-history-list" style="display:flex; flex-direction:column; gap:10px; max-height:60vh; overflow-y:auto;">
+          <!-- Dynamic skill history cards -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

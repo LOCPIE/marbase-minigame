@@ -1,0 +1,187 @@
+[
+  {
+    "id": 1,
+    "question": "Con gì mang được cả cây gỗ to nhưng lại không mang nổi một hòn sỏi nhỏ?",
+    "options": ["Con voi", "Con kiến", "Con sông", "Con cá voi"],
+    "answer": 2,
+    "explanation": "Con sông trôi được cây gỗ lớn trên dòng nước, nhưng hòn sỏi thì chìm ngay xuống đáy!"
+  },
+  {
+    "id": 2,
+    "question": "Cái gì đi thì nằm, đứng thì nằm, nhưng hễ nằm thì nó lại đứng?",
+    "options": ["Bàn chân", "Cây thước kẻ", "Cái bóng", "Chiếc đồng hồ"],
+    "answer": 0,
+    "explanation": "Bàn chân khi bạn đứng hoặc đi thì áp sát mặt đất (nằm ngang), nhưng khi bạn nằm ngủ thì bàn chân lại chổng lên trời (đứng)!"
+  },
+  {
+    "id": 3,
+    "question": "Có một đàn chuột bị điếc đi ngang qua bờ sông. Hỏi đàn đó có bao nhiêu con?",
+    "options": ["1 con", "12 con", "24 con", "Điếc làm sao đếm được"],
+    "answer": 2,
+    "explanation": "Chuột điếc = hư tai = hai tư = 24 con!"
+  },
+  {
+    "id": 4,
+    "question": "Con cua đỏ dài 10cm chạy đua với con cua xanh dài 15cm. Con nào về đích trước?",
+    "options": ["Cua đỏ", "Cua xanh", "Cả 2 huề nhau", "Không con nào chạy được"],
+    "answer": 1,
+    "explanation": "Con cua đỏ đã bị luộc chín rồi thì chạy làm sao được nữa!"
+  },
+  {
+    "id": 5,
+    "question": "Cái gì bạn chỉ có thể giữ được sau khi đã cho người khác?",
+    "options": ["Tiền bạc", "Bí mật", "Lời hứa", "Nụ cười"],
+    "answer": 2,
+    "explanation": "Bạn chỉ 'giữ lời hứa' sau khi bạn đã 'hứa (cho lời hứa)' với người khác!"
+  },
+  {
+    "id": 6,
+    "question": "Tháng nào trong năm người ta ít ngủ nhất?",
+    "options": ["Tháng 2", "Tháng 7 cô hồn", "Tháng 12 cuối năm", "Tháng 1 đầu năm"],
+    "answer": 0,
+    "explanation": "Tháng 2 chỉ có 28 hoặc 29 ngày, ít ngày nhất thì ngủ ít nhất là đúng rồi!"
+  },
+  {
+    "id": 7,
+    "question": "Bệnh gì bác sĩ trên toàn thế giới đều phải bó tay?",
+    "options": ["Bệnh tim", "Bệnh gãy tay", "Bệnh lười", "Bệnh nan y"],
+    "answer": 1,
+    "explanation": "Gãy tay thì bác sĩ phải lấy thạch cao bó tay lại chứ sao!"
+  },
+  {
+    "id": 8,
+    "question": "Loại quần nào có kích thước rộng lớn nhất thế giới?",
+    "options": ["Quần bò cỡ đại", "Quần đùi ông ngoại", "Quần đảo", "Quần thể sinh thái"],
+    "answer": 2,
+    "explanation": "Quần đảo (tập hợp các hòn đảo trên biển) trải rộng hàng nghìn km vuông!"
+  },
+  {
+    "id": 9,
+    "question": "Từ gì trong tiếng Việt mà 100% người Việt Nam thông minh nhất đều phát âm sai?",
+    "options": ["Từ 'Ngoằn ngoèo'", "Từ 'Khúc khuỷu'", "Từ 'Sai'", "Từ 'Không'"],
+    "answer": 2,
+    "explanation": "Phát âm từ 'Sai' thì chính là đọc chữ 'Sai' chứ còn gì nữa!"
+  },
+  {
+    "id": 10,
+    "question": "Nhà Nam có 4 anh em trai: Xuân, Hạ, Thu. Hỏi người con thứ tư tên là gì?",
+    "options": ["Đông", "Nam", "Bắc", "Không xác định"],
+    "answer": 1,
+    "explanation": "Đầu câu đã nói rõ là 'Nhà Nam' rồi mà!"
+  },
+  {
+    "id": 11,
+    "question": "Kẻ tử tù được chọn 1 trong 3 phòng: 1 cháy dữ dội, 2 đầy sát thủ có súng, 3 đàn sư tử nhịn đói 3 năm. Phòng nào an toàn nhất?",
+    "options": ["Phòng 1 lửa cháy", "Phòng 2 sát thủ", "Phòng 3 đàn sư tử", "Chết như nhau"],
+    "answer": 2,
+    "explanation": "Sư tử mà nhịn đói suốt 3 năm thì đã thành bộ xương khô từ đời nào rồi!"
+  },
+  {
+    "id": 12,
+    "question": "Một người da đen rơi xuống Biển Đỏ, hỏi anh ta bị làm sao?",
+    "options": ["Bị chuyển thành màu tím", "Bị cá mập cắn", "Bị ướt", "Bị chìm"],
+    "answer": 2,
+    "explanation": "Rơi xuống nước thì bị ướt chứ còn bị gì nữa!"
+  },
+  {
+    "id": 13,
+    "question": "Ước mơ lớn nhất suốt cả cuộc đời của một chú gấu trúc Panda là gì?",
+    "options": ["Được ăn thịt nướng", "Được chụp một tấm ảnh màu", "Được đi tắm biển", "Được bay lên vũ trụ"],
+    "answer": 1,
+    "explanation": "Vì gấu trúc sinh ra chỉ toàn lông đen và trắng, chụp ảnh kiểu gì cũng chỉ ra ảnh đen trắng!"
+  },
+  {
+    "id": 14,
+    "question": "Con gì đầu dê mình ốc, đi đến đâu ai cũng phải leo trèo vất vả?",
+    "options": ["Con dốc", "Con quái vật", "Con sơn dương", "Con đường"],
+    "answer": 0,
+    "explanation": "Đầu dê (D) + Mình ốc (ỐC) = Dốc!"
+  },
+  {
+    "id": 15,
+    "question": "Cái gì chặt không đứt, bứt không rời, phơi không khô mà đốt cũng chẳng cháy?",
+    "options": ["Không khí", "Nước", "Tình bạn", "Sợi dây cao su"],
+    "answer": 1,
+    "explanation": "Nước chặt làm sao đứt, phơi nắng nước cũng bốc hơi thành nước, đốt nước thì nước dập lửa!"
+  },
+  {
+    "id": 16,
+    "question": "Cái gì lúc mua màu đen, lúc dùng màu đỏ, lúc vứt đi lại màu xám trắng?",
+    "options": ["Đôi giày", "Cục than củi", "Que diêm", "Bình ắc quy"],
+    "answer": 1,
+    "explanation": "Than củi mua về màu đen, khi đốt đỏ rực, cháy tàn thành tro màu xám trắng!"
+  },
+  {
+    "id": 17,
+    "question": "Con kiến bò lên tai con voi thì thầm điều gì khiến con voi ngất xỉu ngay tại chỗ?",
+    "options": [
+      "'Mẹ anh bị ốm rồi'",
+      "'Em đã mang bầu con của anh'",
+      "'Sắp có thợ săn đến bắn anh'",
+      "'Anh nợ tiền tôi chưa trả'"
+    ],
+    "answer": 1,
+    "explanation": "Câu đố kinh điển tiếu lâm: 'Em đã mang giọt máu của anh rồi!' - Voi sốc xỉu luôn!"
+  },
+  {
+    "id": 18,
+    "question": "Vườn thú bất ngờ bị hỏa hoạn cháy lớn, con vật nào sẽ chạy thoát ra ngoài đầu tiên?",
+    "options": ["Con báo săn", "Con khỉ", "Con người", "Con chim"],
+    "answer": 2,
+    "explanation": "Con người có chân và biết sợ lửa nhất thì chạy đầu tiên, các con thú thì bị nhốt trong chuồng!"
+  },
+  {
+    "id": 19,
+    "question": "Bỏ ngoài nướng trong, ăn ngoài bỏ trong là món gì?",
+    "options": ["Bắp ngô nướng", "Khoai lang", "Quả chuối", "Bánh mì kẹp"],
+    "answer": 0,
+    "explanation": "Bắp ngô bóc vỏ ngoài đem nướng, lúc ăn thì ăn hạt bên ngoài và vứt cùi ngô bên trong!"
+  },
+  {
+    "id": 20,
+    "question": "Càng thâu càng ngắn, càng kéo càng dài, hút vào thì sướng nhả ra mịt mù là gì?",
+    "options": ["Kẹo cao su", "Điếu thuốc lá", "Dây thun kéo dài", "Sợi bún"],
+    "answer": 1,
+    "explanation": "Điếu thuốc càng hút (thâu) thì càng ngắn lại!"
+  },
+  {
+    "id": 21,
+    "question": "Loại lịch nào dài nhất trên thế giới mà không quyển lịch nào in hết?",
+    "options": ["Lịch Vạn Niên", "Lịch Sử", "Lịch Mặt Trăng", "Lịch Maya"],
+    "answer": 1,
+    "explanation": "Lịch sử kéo dài từ hàng triệu năm trước đến vô tận tương lai!"
+  },
+  {
+    "id": 22,
+    "question": "Có bao nhiêu chữ C trong câu: 'Cơm canh cà cuống cái gì cũng cay'?",
+    "options": ["6 chữ", "7 chữ", "1 chữ", "5 chữ"],
+    "answer": 2,
+    "explanation": "Chỉ có duy nhất 1 chữ 'C' viết hoa, các chữ còn lại là chữ 'c' thường!"
+  },
+  {
+    "id": 23,
+    "question": "Bà đó bả chết bả bay lên trời. Hỏi bà chết năm bao nhiêu tuổi và do nguyên nhân gì?",
+    "options": [
+      "73 tuổi, do bò đá",
+      "83 tuổi, do trượt chân",
+      "100 tuổi, do tuổi già",
+      "Bay lên trời là thần tiên"
+    ],
+    "answer": 0,
+    "explanation": "Bà bay = Bảy ba = 73 tuổi. Bả chết = Bò đá chết!"
+  },
+  {
+    "id": 24,
+    "question": "Cái gì luôn luôn đến nhưng không bao giờ chịu đến nơi?",
+    "options": ["Mùa đông", "Cơn mưa", "Ngày mai", "Chuyến xe buýt"],
+    "answer": 2,
+    "explanation": "Vì khi 'ngày mai' đến thì nó lại trở thành 'hôm nay' rồi!"
+  },
+  {
+    "id": 25,
+    "question": "Bố mẹ có 6 người con trai, mỗi người con trai lại có 1 cô em gái. Hỏi gia đình có bao nhiêu người?",
+    "options": ["14 người", "9 người", "8 người", "12 người"],
+    "answer": 1,
+    "explanation": "Bố + Mẹ (2) + 6 người con trai (6) + 1 cô em gái út chung (1) = 9 người!"
+  }
+]
