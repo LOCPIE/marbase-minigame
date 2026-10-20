@@ -94,7 +94,6 @@ const appContainer = document.getElementById('app');
 const gameEventBannerContainer = document.getElementById('game-event-banner-container');
 const racetrackEventBannerContainer = document.getElementById('racetrack-event-banner-container');
 const floatingReactionsLayer = document.getElementById('floating-reactions-layer');
-const reactionBarContainer = document.getElementById('reaction-bar-container');
 const hostSoundboardBar = document.getElementById('host-soundboard-bar');
 const mvpAwardsSection = document.getElementById('mvp-awards-section');
 const mvpAwardsGrid = document.getElementById('mvp-awards-grid');
@@ -119,9 +118,6 @@ function switchView(view) {
   if (view) view.classList.add('active');
 
   const inPlay = (view === viewGame || view === viewRacetrack || view === viewEnded);
-  if (reactionBarContainer) {
-    reactionBarContainer.style.display = inPlay ? 'flex' : 'none';
-  }
   if (hostSoundboardBar) {
     hostSoundboardBar.style.display = (inPlay && isHost) ? 'flex' : 'none';
   }
@@ -355,18 +351,7 @@ socket.on('host_sound_fx_triggered', ({ sfxType }) => {
   else if (sfxType === 'fanfare') window.soundEngine.playFanfare();
 });
 
-// Reaction Bar & Host Soundboard Button Listeners
-document.querySelectorAll('.reaction-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const emoji = btn.dataset.emoji;
-    if (currentRoomCode) {
-      socket.emit('send_reaction', { code: currentRoomCode, emoji });
-      window.soundEngine.playPop();
-      btn.style.transform = 'scale(1.25)';
-      setTimeout(() => btn.style.transform = '', 120);
-    }
-  });
-});
+// Host Soundboard Button Listeners
 
 document.querySelectorAll('.host-sfx-btn').forEach(btn => {
   btn.addEventListener('click', () => {
