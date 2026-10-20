@@ -183,5 +183,185 @@
     "options": ["14 người", "9 người", "8 người", "12 người"],
     "answer": 1,
     "explanation": "Bố + Mẹ (2) + 6 người con trai (6) + 1 cô em gái út chung (1) = 9 người!"
+  },
+  {
+    "id": 26,
+    "question": "Con gì sinh ra đã mang tiếng xấu là chuyên đi lừa đảo người khác?",
+    "options": ["Con cáo", "Con lừa", "Con vẹt", "Con rắn"],
+    "answer": 1,
+    "explanation": "Con lừa vì tên nó là 'Lừa' chứ có lừa ai đâu!"
+  },
+  {
+    "id": 27,
+    "question": "Cái gì tay trái cầm được nhưng tay phải không bao giờ cầm được?",
+    "options": ["Cổ tay phải", "Cái bút chì", "Cục than hồng", "Bàn tay trái"],
+    "answer": 0,
+    "explanation": "Tay phải làm sao tự nắm lấy cổ tay phải hoặc cùi chỏ bên phải của chính mình được!"
+  },
+  {
+    "id": 28,
+    "question": "Cái gì khi sạch thì có màu đen, mà khi bẩn thì lại có màu trắng?",
+    "options": ["Lốp xe ô tô", "Cái bảng đen", "Đôi giày da", "Bóng đêm"],
+    "answer": 1,
+    "explanation": "Cái bảng đen khi sạch thì đen bóng, viết phấn trắng bám bụi vào thì thành bẩn!"
+  },
+  {
+    "id": 29,
+    "question": "Loại xe nào không bao giờ giảm đi mà theo thời gian chỉ có tăng lên?",
+    "options": ["Xe máy", "Xe đạp", "Xe tăng", "Xe rùa"],
+    "answer": 2,
+    "explanation": "Xe tăng (Tăng giá, tăng cân, tăng tuổi) chứ không có 'xe giảm'!"
+  },
+  {
+    "id": 30,
+    "question": "Một người đứng dưới trời mưa tầm tã không dù, không nón, không nấp cây mà không bị ướt một sợi tóc nào. Tại sao?",
+    "options": ["Mặc áo mưa kín mít", "Người đó bị hói đầu", "Mưa trong phim", "Chạy quá nhanh"],
+    "answer": 1,
+    "explanation": "Người đó bị trọc đầu (không có sợi tóc nào) thì làm sao ướt tóc được!"
+  },
+  {
+    "id": 31,
+    "question": "Trên bàn có 3 quả táo, bạn nhanh tay lấy đi 2 quả. Hỏi BẠN CÓ bao nhiêu quả táo?",
+    "options": ["1 quả", "2 quả", "3 quả", "0 quả"],
+    "answer": 1,
+    "explanation": "Bạn lấy đi 2 quả thì bạn đang cầm trên tay 2 quả táo đó!"
+  },
+  {
+    "id": 32,
+    "question": "Cái gì thuộc về quyền sở hữu của bạn nhưng người khác lại dùng nó nhiều hơn bạn?",
+    "options": ["Tiền của bạn", "Tên của bạn", "Điện thoại của bạn", "Xe của bạn"],
+    "answer": 1,
+    "explanation": "Tên của bạn toàn để người khác gọi chứ bạn có tự gọi tên mình mấy khi đâu!"
+  },
+  {
+    "id": 33,
+    "question": "Cái gì càng đem đi rửa thì lại càng biến thành bẩn?",
+    "options": ["Nước", "Cái khăn lau", "Miếng rửa bát", "Bàn tay"],
+    "answer": 0,
+    "explanation": "Nước đem đi rửa đồ vật thì sau đó nước sẽ bị bẩn đục ngầu!"
+  },
+  {
+    "id": 34,
+    "question": "Con mèo nào trên thế giới sợ chuột đến mức nhìn thấy là chạy mất dép?",
+    "options": ["Mèo mướp", "Mèo máy Doraemon", "Mèo Tom", "Mèo rừng"],
+    "answer": 1,
+    "explanation": "Mèo máy Doraemon từng bị chuột gặm mất cả đôi tai nên sợ chuột cả đời!"
+  },
+  {
+    "id": 35,
+    "question": "Cây cầu nào ngắn nhất Việt Nam mà ai ai cũng có thể sở hữu?",
+    "options": ["Cầu Rồng", "Cầu Thê Húc", "Cầu Răng", "Cầu khỉ"],
+    "answer": 2,
+    "explanation": "Cầu răng (cầu răng sứ trong nha khoa) chỉ dài vài centimet nằm ngay trong miệng!"
+  },
+  {
+    "id": 36,
+    "question": "Thời phong kiến, nhà vua gọi hoàng hậu tôn quý của mình bằng gì?",
+    "options": ["Bằng ái phi", "Bằng miệng", "Bằng mật chỉ", "Bằng tên thật"],
+    "answer": 1,
+    "explanation": "Không gọi bằng miệng thì gọi bằng gì bây giờ!"
+  },
+  {
+    "id": 37,
+    "question": "Có cổ nhưng không có miệng, có thân nhưng không có tay chân là cái gì?",
+    "options": ["Cái chai nước", "Con rắn", "Cây quạt máy", "Cái gối"],
+    "answer": 0,
+    "explanation": "Cái chai có cổ chai, thân chai, đáy chai nhưng không có miệng để ăn!"
+  },
+  {
+    "id": 38,
+    "question": "Con đường nào dài nhất mà không một chiếc xe hiện đại nào có thể đi hết?",
+    "options": ["Đường Quốc lộ 1A", "Đường Xích Đạo", "Đường Đời", "Đường Trường Sơn"],
+    "answer": 2,
+    "explanation": "Đường đời mỗi người trải qua một đời người, không xe cộ nào chở hết được!"
+  },
+  {
+    "id": 39,
+    "question": "Cái gì bạn vừa cất tiếng gọi tên nó là nó lập tức biến mất ngay?",
+    "options": ["Bóng tối", "Sự im lặng", "Bí mật", "Cơn gió"],
+    "answer": 1,
+    "explanation": "Khi bạn lên tiếng nói thì không gian không còn 'im lặng' nữa rồi!"
+  },
+  {
+    "id": 40,
+    "question": "Cái gì của bạn cứ mỗi năm lại tăng thêm một nấc mà không bao giờ giảm xuống?",
+    "options": ["Cân nặng", "Tiền lương", "Tuổi tác", "Chiều cao"],
+    "answer": 2,
+    "explanation": "Tuổi tác chỉ có tăng đều theo năm tháng, không ai trẻ lại được!"
+  },
+  {
+    "id": 41,
+    "question": "Môn thể thao nào mà các vận động viên càng lùi về phía sau thì càng dễ giành chiến thắng?",
+    "options": ["Đua ngựa", "Kéo co", "Bắn cung", "Chạy nước rút"],
+    "answer": 1,
+    "explanation": "Môn kéo co: đội nào giật dây và lùi về sau được nhiều hơn là đội thắng!"
+  },
+  {
+    "id": 42,
+    "question": "Nghề nào luôn luôn nhìn xuống khách hàng của mình nhưng khách hàng vẫn tươi cười trả tiền?",
+    "options": ["Thợ cắt tóc", "Bác sĩ phẫu thuật", "Phi công", "Nhân viên spa"],
+    "answer": 0,
+    "explanation": "Thợ cắt tóc đứng nhìn xuống đầu khách hàng suốt buổi để cắt tỉa!"
+  },
+  {
+    "id": 43,
+    "question": "Con ngựa bị buộc vào sợi dây thừng dài 5m, đống cỏ cách nó 10m. Làm sao con ngựa ăn được cỏ?",
+    "options": ["Dây thừng dãn ra", "Đầu dây kia không buộc vào đâu", "Gió thổi cỏ lại gần", "Ngựa nhảy xa"],
+    "answer": 1,
+    "explanation": "Đầu dây thừng kia không hề bị buộc vào cọc nào, ngựa cứ thế đi tới ăn thôi!"
+  },
+  {
+    "id": 44,
+    "question": "Cái gì có rất nhiều răng nhưng từ lúc sinh ra đến hỏng không bao giờ nhai được?",
+    "options": ["Chiếc lược chải đầu", "Lưỡi cưa", "Bánh răng đồng hồ", "Cả 3 phương án trên"],
+    "answer": 3,
+    "explanation": "Lược, cưa, bánh răng đều có răng nhưng chỉ dùng để chải, cắt, truyền động chứ không nhai!"
+  },
+  {
+    "id": 45,
+    "question": "Nếu bạn vượt qua người đang chạy ở vị trí thứ hai trong một cuộc đua, bạn đứng thứ mấy?",
+    "options": ["Vị trí thứ nhất", "Vị trí thứ hai", "Vị trí thứ ba", "Về đích"],
+    "answer": 1,
+    "explanation": "Bạn vượt qua người thứ hai thì bạn thế chỗ của họ, tức là bạn đứng thứ hai!"
+  },
+  {
+    "id": 46,
+    "question": "Hành động gì 'trên nhấp nhấp, dưới giật giật' khiến người ta hồi hộp chờ đợi?",
+    "options": ["Đang câu cá", "Đang may quần áo", "Đang tập thể hình", "Đang đánh đu"],
+    "answer": 0,
+    "explanation": "Phao câu cá nhấp nhô trên mặt nước, cần thủ ở dưới giật cần câu bắt cá!"
+  },
+  {
+    "id": 47,
+    "question": "Cái gì của người chồng mà các bà vợ thích giữ và thích tiêu nhất?",
+    "options": ["Thẻ lương của chồng", "Chìa khóa xe", "Điện thoại chồng", "Đồng hồ đeo tay"],
+    "answer": 0,
+    "explanation": "Thẻ lương và tiền lương của chồng thì các bà vợ quản lý và tiêu là chuẩn bài!"
+  },
+  {
+    "id": 48,
+    "question": "Con gì đập thì sống, không đập thì chết?",
+    "options": ["Con tim", "Con đập thủy điện", "Con muỗi", "Con cua"],
+    "answer": 0,
+    "explanation": "Trái tim (con tim) phải đập liên tục thì người mới sống, ngừng đập là ngỏm!"
+  },
+  {
+    "id": 49,
+    "question": "Cái gì chỉ tăng giá trị khi nó bị rách hoặc vỡ ra?",
+    "options": ["Quả trứng gà", "Chiếc áo rách", "Gương soi", "Đồng tiền"],
+    "answer": 0,
+    "explanation": "Quả trứng vỡ vỏ ra thì mới chiên, luộc hoặc ấp nở thành gà con có giá trị!"
+  },
+  {
+    "id": 50,
+    "question": "Làm thế nào để chia 5 quả táo cho 5 bạn trong phòng mà trong giỏ vẫn còn nguyên 1 quả?",
+    "options": [
+      "Cắt đôi 1 quả táo",
+      "Đưa quả cuối cùng kèm cả cái giỏ cho bạn thứ năm",
+      "Mua thêm 1 quả khác",
+      "Không thể làm được"
+    ],
+    "answer": 1,
+    "explanation": "Đưa cho 4 bạn đầu mỗi người 1 quả, bạn thứ năm nhận quả táo còn lại nằm nguyên trong giỏ!"
   }
 ]

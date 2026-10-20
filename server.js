@@ -52,6 +52,29 @@ function getRandomSkill() {
   return { ...selected, uid: 'sk_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5) };
 }
 
+function shuffleArray(array) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function getRandomizedQuestion(origQ) {
+  if (!origQ) return null;
+  const optionsWithIndices = origQ.options.map((opt, idx) => ({ text: opt, isCorrect: idx === origQ.answer }));
+  for (let i = optionsWithIndices.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [optionsWithIndices[i], optionsWithIndices[j]] = [optionsWithIndices[j], optionsWithIndices[i]];
+  }
+  return {
+    ...origQ,
+    options: optionsWithIndices.map(o => o.text),
+    answer: optionsWithIndices.findIndex(o => o.isCorrect)
+  };
+}
+
 function getSortedPlayers(room) {
   return [...room.players].sort((a, b) => b.score - a.score);
 }
@@ -222,7 +245,8 @@ function createRoom(hostSocketId, hostName, hostAvatar) {
     isSuddenDeath: false,
     activeEvent: null,
     jackpotClaimed: false,
-    mvpAwards: []
+    mvpAwards: [],
+    matchQuestions: shuffleArray(questions).map(getRandomizedQuestion)
   };
 
   rooms.set(code, room);
@@ -233,6 +257,8 @@ function startGame(room) {
   if (room.players.length === 0) return;
   room.state = 'STARTING';
   room.questionIndex = 0;
+  // Shuffle all 50 questions randomly for this match, with randomized option order
+  room.matchQuestions = shuffleArray(questions).map(getRandomizedQuestion);
   addRoomLog(room, 'Trận đấu bắt đầu! Chuẩn bị đến với câu số 1...');
   sendPersonalizedState(room);
 
@@ -270,9 +296,12 @@ function nextQuestion(room) {
     room.activeEvent = events[Math.floor(Math.random() * events.length)];
   }
 
-  // Pick question (cycling or random)
-  const qIndex = room.questionIndex % questions.length;
-  room.currentQuestion = questions[qIndex];
+  // Pick question from randomized match pool
+  if (!room.matchQuestions || room.matchQuestions.length === 0) {
+    room.matchQuestions = shuffleArray(questions).map(getRandomizedQuestion);
+  }
+  const qIndex = room.questionIndex % room.matchQuestions.length;
+  room.currentQuestion = room.matchQuestions[qIndex];
   room.state = 'QUESTION';
   room.timeLeft = (room.activeEvent && room.activeEvent.timeLimit) ? room.activeEvent.timeLimit : 15;
 
@@ -1362,6 +1391,7 @@ io.on('connection', (socket) => {
     room.activeEvent = null;
     room.jackpotClaimed = false;
     room.mvpAwards = [];
+    room.matchQuestions = shuffleArray(questions).map(getRandomizedQuestion);
     room.players.forEach(p => {
       p.score = 0;
       p.fury = 0;
