@@ -238,6 +238,10 @@ function createRoom(hostSocketId, hostName, hostAvatar) {
     timeLeft: 15,
     skillPhaseTimeLeft: 0,
     timerInterval: null,
+    revealInterval: null,
+    revealTimeout: null,
+    transitionTimeout: null,
+    revealScheduled: false,
     botTimeouts: [],
     logs: [{ text: `Phòng ${code} đã được tạo bởi Host [${host.name}]!`, time: Date.now() }],
     skillHistory: [],
@@ -268,15 +272,32 @@ function startGame(room) {
 }
 
 function nextQuestion(room) {
+  if (!room) return;
   if (room.questionIndex >= room.totalQuestions) {
     endGame(room);
     return;
   }
 
   // Clear any existing intervals and bot timeouts
-  if (room.timerInterval) clearInterval(room.timerInterval);
+  if (room.timerInterval) {
+    clearInterval(room.timerInterval);
+    room.timerInterval = null;
+  }
+  if (room.revealInterval) {
+    clearInterval(room.revealInterval);
+    room.revealInterval = null;
+  }
+  if (room.revealTimeout) {
+    clearTimeout(room.revealTimeout);
+    room.revealTimeout = null;
+  }
+  if (room.transitionTimeout) {
+    clearTimeout(room.transitionTimeout);
+    room.transitionTimeout = null;
+  }
   room.botTimeouts.forEach(t => clearTimeout(t));
   room.botTimeouts = [];
+  room.revealScheduled = false;
 
   // Determine Golden Question (câu 5, câu 10, câu cuối)
   room.isGolden = (room.questionIndex === 4 || room.questionIndex === 9 || room.questionIndex === room.totalQuestions - 1);
@@ -349,6 +370,7 @@ function nextQuestion(room) {
 
     if (room.timeLeft <= 0) {
       clearInterval(room.timerInterval);
+      room.timerInterval = null;
       revealAnswer(room);
     }
   }, 1000);
@@ -382,13 +404,14 @@ function triggerBotsAnswer(room) {
 
     // Bot skill usage chance
     if (bot.skills.length > 0 && Math.random() < 0.35) {
-      setTimeout(() => {
-        if (bot.skills.length === 0) return;
+      const botSkillTimeout = setTimeout(() => {
+        if (room.state !== 'QUESTION' || bot.skills.length === 0) return;
         const skill = bot.skills[0];
         const others = room.players.filter(p => p.id !== bot.id);
         const target = others[Math.floor(Math.random() * others.length)];
         executeSkill(room, bot, skill.id, target ? target.id : null);
       }, delay - 2000 > 1000 ? delay - 2000 : 1500);
+      room.botTimeouts.push(botSkillTimeout);
     }
   }
 }
@@ -544,19 +567,41 @@ function handlePlayerAnswer(room, player, answerIndex, timeLeftAtAnswer) {
   sendPersonalizedState(room);
 
   // Check if all players answered
+  // Check if all players answered
   const activePlayable = room.players.filter(p => !p.debuffs.silenced && !p.debuffs.frozen);
-  const allAnswered = activePlayable.every(p => p.answered);
+  const connectedActive = activePlayable.filter(p => p.isBot || (p.socketId && io.sockets.sockets.get(p.socketId)));
+  const allAnswered = connectedActive.length > 0 && connectedActive.every(p => p.answered);
 
-  if (allAnswered && activePlayable.length > 0) {
-    if (room.timerInterval) clearInterval(room.timerInterval);
-    setTimeout(() => {
+  if (allAnswered && !room.revealScheduled && room.state === 'QUESTION') {
+    room.revealScheduled = true;
+    if (room.timerInterval) {
+      clearInterval(room.timerInterval);
+      room.timerInterval = null;
+    }
+    room.revealTimeout = setTimeout(() => {
+      room.revealTimeout = null;
       revealAnswer(room);
     }, 800);
   }
 }
 
 function revealAnswer(room) {
+  if (!room || room.state !== 'QUESTION') return;
   room.state = 'REVEAL';
+  room.revealScheduled = false;
+
+  if (room.timerInterval) {
+    clearInterval(room.timerInterval);
+    room.timerInterval = null;
+  }
+  if (room.revealTimeout) {
+    clearTimeout(room.revealTimeout);
+    room.revealTimeout = null;
+  }
+  if (room.transitionTimeout) {
+    clearTimeout(room.transitionTimeout);
+    room.transitionTimeout = null;
+  }
 
   // Handle players who did not answer before timeout
   for (const p of room.players) {
@@ -683,7 +728,7 @@ function revealAnswer(room) {
   sendPersonalizedState(room);
 
   // Trigger bots to use skills if eligible
-  setTimeout(() => {
+  const botSkillRevealTimeout = setTimeout(() => {
     if (room.state !== 'REVEAL' || !room.eligibleSkillUserIds) return;
     const eligibleBots = room.players.filter(p => p.isBot && room.eligibleSkillUserIds.includes(p.id));
     for (const bot of eligibleBots) {
@@ -695,6 +740,7 @@ function revealAnswer(room) {
       }
     }
   }, 2200);
+  room.botTimeouts.push(botSkillRevealTimeout);
 
   // 10s countdown timer
   if (room.revealInterval) clearInterval(room.revealInterval);
@@ -705,22 +751,22 @@ function revealAnswer(room) {
     if (room.revealTimeLeft <= 0) {
       clearInterval(room.revealInterval);
       room.revealInterval = null;
-      // Skills phase ended, now awaiting Host to click next question
-      room.eligibleSkillUserIds = [];
-      sendPersonalizedState(room);
+      // Auto-advance to next question smoothly!
+      advanceNextQuestion(room);
     }
   }, 1000);
 
-  // Safety fallback timeout (60s) in case host is idle/disconnected
+  // Safety fallback timeout (13s) in case timer is throttled on background tabs
   if (room.revealTimeout) clearTimeout(room.revealTimeout);
   room.revealTimeout = setTimeout(() => {
     if (room.state === 'REVEAL') {
       advanceNextQuestion(room);
     }
-  }, 60000);
+  }, 13000);
 }
 
 function advanceNextQuestion(room) {
+  if (!room || room.state !== 'REVEAL') return;
   if (room.revealTimeout) {
     clearTimeout(room.revealTimeout);
     room.revealTimeout = null;
@@ -728,6 +774,10 @@ function advanceNextQuestion(room) {
   if (room.revealInterval) {
     clearInterval(room.revealInterval);
     room.revealInterval = null;
+  }
+  if (room.transitionTimeout) {
+    clearTimeout(room.transitionTimeout);
+    room.transitionTimeout = null;
   }
   room.eligibleSkillUserIds = [];
   room.questionIndex++;
@@ -1205,6 +1255,21 @@ io.on('connection', (socket) => {
       return socket.emit('join_error', { message: 'Mã phòng không tồn tại!' });
     }
     if (room.state !== 'LOBBY') {
+      // Allow reconnecting human player
+      const existingPlayer = room.players.find(p => !p.isBot && p.name.trim().toLowerCase() === (name || '').trim().toLowerCase());
+      if (existingPlayer) {
+        existingPlayer.socketId = socket.id;
+        socket.join(room.code);
+        addRoomLog(room, `🔄 [${existingPlayer.name}] đã kết nối lại phòng chơi.`);
+        return sendPersonalizedState(room);
+      }
+      // Allow reconnecting Host
+      if (room.host && room.host.name.trim().toLowerCase() === (name || '').trim().toLowerCase()) {
+        room.host.socketId = socket.id;
+        socket.join(room.code);
+        addRoomLog(room, `👑 Host [${room.host.name}] đã kết nối lại phòng chơi.`);
+        return sendPersonalizedState(room);
+      }
       return socket.emit('join_error', { message: 'Trận đấu trong phòng này đã bắt đầu!' });
     }
     if (room.players.length >= 10) {
@@ -1235,6 +1300,27 @@ io.on('connection', (socket) => {
     socket.join(room.code);
     addRoomLog(room, `👋 [${newPlayer.name}] đã tham gia phòng chơi.`);
     sendPersonalizedState(room);
+  });
+
+  // Rejoin session (auto-reconnect on socket restore or reload)
+  socket.on('rejoin_session', ({ code, playerId, name, isHost }) => {
+    const cleanCode = (code || '').trim().toUpperCase();
+    const room = rooms.get(cleanCode);
+    if (!room) return;
+
+    if (isHost && room.host && (room.host.id === playerId || room.host.name === name)) {
+      room.host.socketId = socket.id;
+      socket.join(room.code);
+      sendPersonalizedState(room);
+      return;
+    }
+
+    const player = room.players.find(p => p.id === playerId || (!p.isBot && p.name === name));
+    if (player) {
+      player.socketId = socket.id;
+      socket.join(room.code);
+      sendPersonalizedState(room);
+    }
   });
 
   // Add Bot (Host only, up to 10 players)
@@ -1312,7 +1398,10 @@ io.on('connection', (socket) => {
       advanceNextQuestion(room);
     } else if (room.state === 'QUESTION') {
       // Host force-reveals question
-      if (room.timerInterval) clearInterval(room.timerInterval);
+      if (room.timerInterval) {
+        clearInterval(room.timerInterval);
+        room.timerInterval = null;
+      }
       revealAnswer(room);
     }
   });
@@ -1416,11 +1505,12 @@ io.on('connection', (socket) => {
       // Check if Host disconnected
       if (room.host && room.host.socketId === socket.id) {
         addRoomLog(room, `⚠️ Host [${room.host.name}] bị mất kết nối.`);
+        room.host.socketId = null;
         if (room.players.length === 0) {
           rooms.delete(code);
         } else {
           // In lobby, transfer host role to first human player if available
-          const nextHumanIdx = room.players.findIndex(p => !p.isBot);
+          const nextHumanIdx = room.players.findIndex(p => !p.isBot && p.socketId);
           if (room.state === 'LOBBY' && nextHumanIdx !== -1) {
             const nextHuman = room.players.splice(nextHumanIdx, 1)[0];
             room.host = {
@@ -1444,6 +1534,7 @@ io.on('connection', (socket) => {
         if (room.state === 'LOBBY') {
           room.players.splice(pIdx, 1);
         } else {
+          leavingPlayer.socketId = null;
           addRoomLog(room, `⚠️ [${leavingPlayer.name}] bị mất kết nối.`);
         }
         sendPersonalizedState(room);

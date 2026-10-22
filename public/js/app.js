@@ -10,6 +10,8 @@ let selectedAnswer = null;
 let selectedSkillToUse = null;
 let inkCanvasCtx = null;
 let inkPointsRemaining = 100;
+let renderedQuestionId = null;
+let handledDebuffQuestionId = null;
 
 // Elements
 const viewHome = document.getElementById('view-home');
@@ -206,9 +208,33 @@ btnPlayAgain.addEventListener('click', () => {
 });
 
 // Socket Events
+socket.on('connect', () => {
+  try {
+    const saved = sessionStorage.getItem('minigame_session');
+    if (saved) {
+      const data = JSON.parse(saved);
+      if (data && data.code) {
+        currentRoomCode = data.code;
+        myPlayerId = data.playerId;
+        isHost = !!data.isHost;
+        socket.emit('rejoin_session', data);
+      }
+    }
+  } catch(e) {}
+});
+
 socket.on('room_created', ({ code }) => {
   currentRoomCode = code;
   isHost = true;
+  try {
+    sessionStorage.setItem('minigame_session', JSON.stringify({
+      code,
+      playerId: null,
+      name: inputPlayerName.value.trim() || 'Chủ Phòng',
+      avatar: selectedAvatar,
+      isHost: true
+    }));
+  } catch(e) {}
   showToast(`✅ Đã tạo phòng ${code}!`);
 });
 
@@ -228,11 +254,25 @@ socket.on('room_sync', (room) => {
   if (room.me) myPlayerId = room.me.id;
   isHost = !!(room.me && room.me.isHost);
 
+  if (room.code && room.me) {
+    try {
+      sessionStorage.setItem('minigame_session', JSON.stringify({
+        code: room.code,
+        playerId: room.me.id,
+        name: room.me.name,
+        avatar: room.me.avatar,
+        isHost: !!room.me.isHost
+      }));
+    } catch(e) {}
+  }
+
   // Route Views based on room state
   if (room.state === 'LOBBY') {
     renderLobby(room);
     switchView(viewLobby);
   } else if (room.state === 'STARTING') {
+    renderedQuestionId = null;
+    handledDebuffQuestionId = null;
     switchView(viewGame);
     questionText.textContent = '🚀 Trận đấu đang chuẩn bị khởi tranh...';
     optionsGrid.innerHTML = '';
@@ -280,7 +320,7 @@ socket.on('timer_tick', ({ timeLeft }) => {
 // Racetrack 10s reveal timer tick
 socket.on('reveal_timer_tick', ({ timeLeft }) => {
   if (racetrackCountdown) {
-    racetrackCountdown.textContent = timeLeft > 0 ? `${timeLeft}s` : 'Chờ Host';
+    racetrackCountdown.textContent = timeLeft > 0 ? `${timeLeft}s` : 'Chuẩn bị câu kế...';
   }
   if (timeLeft <= 3 && timeLeft > 0) {
     window.soundEngine.playTickHurry();
@@ -508,34 +548,43 @@ function renderGame(room) {
         slot.classList.remove('active');
       }
     });
-    handleDebuffs(me.debuffs);
+    handleDebuffs(me.debuffs, room.question.id);
   }
 
   // Question text
   questionText.textContent = room.question.question;
 
-  // Options grid
-  optionsGrid.innerHTML = '';
   const prefixLetters = ['A', 'B', 'C', 'D'];
+  const isSilenced = !!(me.debuffs && me.debuffs.silenced);
+  const isFrozen = !!(me.debuffs && me.debuffs.frozen);
+  const is5050 = !!(me.buffs && me.buffs.eagle5050);
+
+  let hiddenOpts = [];
+  if (is5050 && room.state === 'QUESTION') {
+    hiddenOpts = [1, 3];
+  }
+
+  let optionIndices = [0, 1, 2, 3];
+  if (me.debuffs && me.debuffs.scrambleKeys) {
+    optionIndices = [3, 1, 0, 2];
+  }
 
   if (isPresenter) {
     // HOST VIEW: Options displayed without knowing answer beforehand, non-clickable
-    const isRevealed = room.state === 'REVEAL' && room.question && room.question.answer !== undefined;
-    (room.question.options || []).forEach((optText, optIdx) => {
-      const optBtn = document.createElement('div');
-      optBtn.className = 'option-btn';
-      const isCorrect = isRevealed && room.question.answer === optIdx;
-      if (isCorrect) {
-        optBtn.style.borderColor = 'var(--neon-green)';
-        optBtn.style.background = 'rgba(0, 245, 212, 0.15)';
-      }
-      optBtn.innerHTML = `
-        <div class="option-prefix">${prefixLetters[optIdx]}</div>
-        <div style="flex:1;">${escapeHtml(optText)}</div>
-        ${isCorrect ? '<span style="font-size:0.75rem; font-weight:900; color:var(--neon-green); background:rgba(0,245,212,0.25); padding:2px 8px; border-radius:4px;">⭐ ĐÁP ÁN ĐÚNG</span>' : ''}
-      `;
-      optionsGrid.appendChild(optBtn);
-    });
+    if (renderedQuestionId !== room.question.id) {
+      renderedQuestionId = room.question.id;
+      optionsGrid.innerHTML = '';
+      (room.question.options || []).forEach((optText, optIdx) => {
+        const optBtn = document.createElement('div');
+        optBtn.className = 'option-btn';
+        optBtn.dataset.optIdx = optIdx;
+        optBtn.innerHTML = `
+          <div class="option-prefix">${prefixLetters[optIdx]}</div>
+          <div style="flex:1;">${escapeHtml(optText)}</div>
+        `;
+        optionsGrid.appendChild(optBtn);
+      });
+    }
 
     // Render Live Answer Tracking for all players
     const answeredCount = room.players.filter(p => p.hasAnswered).length;
@@ -562,70 +611,70 @@ function renderGame(room) {
   }
 
   // PLAYER VIEW: Normal clickable options
-  const isSilenced = !!(me.debuffs && me.debuffs.silenced);
-  const isFrozen = !!(me.debuffs && me.debuffs.frozen);
-  const is5050 = !!(me.buffs && me.buffs.eagle5050);
+  const isQuestionNew = (renderedQuestionId !== room.question.id);
+  if (isQuestionNew) {
+    renderedQuestionId = room.question.id;
+    optionsGrid.innerHTML = '';
 
-  let optionIndices = [0, 1, 2, 3];
-  if (me.debuffs && me.debuffs.scrambleKeys) {
-    optionIndices = [3, 1, 0, 2];
-  }
+    optionIndices.forEach((optIdx, displayIdx) => {
+      const optBtn = document.createElement('button');
+      optBtn.className = 'option-btn';
+      optBtn.dataset.optIdx = optIdx;
 
-  let hiddenOpts = [];
-  if (is5050 && room.state === 'QUESTION') {
-    hiddenOpts = [1, 3];
-  }
+      if (hiddenOpts.includes(optIdx)) {
+        optBtn.classList.add('disabled');
+        optBtn.innerHTML = `
+          <div class="option-prefix">${prefixLetters[displayIdx]}</div>
+          <div>(Đã bị loại 50/50)</div>
+        `;
+        optionsGrid.appendChild(optBtn);
+        return;
+      }
 
-  optionIndices.forEach((optIdx, displayIdx) => {
-    const optBtn = document.createElement('button');
-    optBtn.className = 'option-btn';
+      if (isSilenced || isFrozen) {
+        optBtn.classList.add('disabled');
+      }
 
-    if (hiddenOpts.includes(optIdx)) {
-      optBtn.classList.add('disabled');
+      if (me.answered && me.selectedAnswer === optIdx) {
+        optBtn.classList.add('selected');
+      }
+
       optBtn.innerHTML = `
         <div class="option-prefix">${prefixLetters[displayIdx]}</div>
-        <div>(Đã bị loại 50/50)</div>
+        <div style="flex:1;">${escapeHtml(room.question.options[optIdx])}</div>
       `;
-      optionsGrid.appendChild(optBtn);
-      return;
-    }
 
-    if (isSilenced || isFrozen) {
-      optBtn.classList.add('disabled');
-    }
+      optBtn.addEventListener('click', () => {
+        if (room.state !== 'QUESTION' || me.answered || isSilenced || isFrozen) return;
+        selectedAnswer = optIdx;
+        optBtn.classList.add('selected');
+        window.soundEngine.playTick();
 
-    if (me.answered && me.selectedAnswer === optIdx) {
-      optBtn.classList.add('selected');
-    }
-
-    if (room.state === 'REVEAL' && room.question.answer !== undefined) {
-      if (optIdx === room.question.answer) {
-        optBtn.classList.add('correct');
-      } else if (me.answered && me.selectedAnswer === optIdx) {
-        optBtn.classList.add('wrong');
-      }
-    }
-
-    optBtn.innerHTML = `
-      <div class="option-prefix">${prefixLetters[displayIdx]}</div>
-      <div style="flex:1;">${escapeHtml(room.question.options[optIdx])}</div>
-    `;
-
-    optBtn.addEventListener('click', () => {
-      if (room.state !== 'QUESTION' || me.answered || isSilenced || isFrozen) return;
-      selectedAnswer = optIdx;
-      optBtn.classList.add('selected');
-      window.soundEngine.playTick();
-
-      socket.emit('submit_answer', {
-        code: currentRoomCode,
-        answerIndex: optIdx,
-        timeLeft: room.timeLeft
+        socket.emit('submit_answer', {
+          code: currentRoomCode,
+          answerIndex: optIdx,
+          timeLeft: room.timeLeft
+        });
       });
-    });
 
-    optionsGrid.appendChild(optBtn);
-  });
+      optionsGrid.appendChild(optBtn);
+    });
+  } else {
+    // Only update existing buttons in-place (zero DOM thrashing while other players answer)
+    const buttons = optionsGrid.querySelectorAll('.option-btn');
+    buttons.forEach(optBtn => {
+      const optIdx = parseInt(optBtn.dataset.optIdx, 10);
+      if (hiddenOpts.includes(optIdx) || isSilenced || isFrozen) {
+        optBtn.classList.add('disabled');
+      } else {
+        optBtn.classList.remove('disabled');
+      }
+
+      if (me.answered && me.selectedAnswer === optIdx) {
+        optBtn.classList.add('selected');
+      }
+    });
+  }
 
   if (room.state === 'REVEAL' && room.question.explanation) {
     explanationBox.style.display = 'block';
@@ -971,8 +1020,10 @@ function renderSkillHistoryModal() {
 }
 
 // Handle Debuffs visually (Ink, screen shake, scramble)
-function handleDebuffs(debuffs) {
+function handleDebuffs(debuffs, qId) {
   if (!debuffs) return;
+  if (handledDebuffQuestionId === qId) return;
+  handledDebuffQuestionId = qId;
 
   // Ink blind
   if (debuffs.inkBlind) {
@@ -1259,13 +1310,13 @@ function renderRacetrack(room) {
   // 3. Countdown timer on race track (10 seconds)
   if (racetrackTimerInterval) clearInterval(racetrackTimerInterval);
   let timeLeft = room.revealTimeLeft !== undefined ? room.revealTimeLeft : 10;
-  racetrackCountdown.textContent = timeLeft > 0 ? `${timeLeft}s` : 'Chờ Host';
+  racetrackCountdown.textContent = timeLeft > 0 ? `${timeLeft}s` : 'Chuẩn bị câu kế...';
   racetrackTimerInterval = setInterval(() => {
     timeLeft--;
     if (timeLeft > 0) {
       racetrackCountdown.textContent = `${timeLeft}s`;
     } else {
-      racetrackCountdown.textContent = 'Chờ Host';
+      racetrackCountdown.textContent = 'Chuẩn bị câu kế...';
       clearInterval(racetrackTimerInterval);
     }
   }, 1000);

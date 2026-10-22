@@ -12,6 +12,16 @@ class SoundEngine {
         this.ctx = new AudioCtx();
       }
     }
+    if (this.ctx && !this.noiseBuffer) {
+      try {
+        const bufferSize = Math.floor(this.ctx.sampleRate * 0.5);
+        this.noiseBuffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+        const data = this.noiseBuffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+          data[i] = Math.random() * 2 - 1;
+        }
+      } catch (e) {}
+    }
     if (this.ctx && this.ctx.state === 'suspended') {
       this.ctx.resume();
     }
@@ -108,31 +118,27 @@ class SoundEngine {
   playExplosion() {
     if (!this.enabled) return;
     this.init();
-    if (!this.ctx) return;
-    // White noise explosion buffer
-    const bufferSize = this.ctx.sampleRate * 0.5;
-    const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
-    const data = buffer.getChannelData(0);
-    for (let i = 0; i < bufferSize; i++) {
-      data[i] = Math.random() * 2 - 1;
-    }
-    const noise = this.ctx.createBufferSource();
-    noise.buffer = buffer;
+    if (!this.ctx || !this.noiseBuffer) return;
 
-    const filter = this.ctx.createBiquadFilter();
-    filter.type = 'lowpass';
-    filter.frequency.setValueAtTime(400, this.ctx.currentTime);
-    filter.frequency.linearRampToValueAtTime(50, this.ctx.currentTime + 0.5);
+    try {
+      const noise = this.ctx.createBufferSource();
+      noise.buffer = this.noiseBuffer;
 
-    const gain = this.ctx.createGain();
-    gain.gain.setValueAtTime(0.6, this.ctx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.5);
+      const filter = this.ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(400, this.ctx.currentTime);
+      filter.frequency.linearRampToValueAtTime(50, this.ctx.currentTime + 0.5);
 
-    noise.connect(filter);
-    filter.connect(gain);
-    gain.connect(this.ctx.destination);
+      const gain = this.ctx.createGain();
+      gain.gain.setValueAtTime(0.6, this.ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.5);
 
-    noise.start();
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(this.ctx.destination);
+
+      noise.start();
+    } catch(e) {}
   }
 
   playFanfare() {
