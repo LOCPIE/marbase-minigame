@@ -2,112 +2,192 @@
   {
     "id": 1,
     "question": "Con gì mang được cả cây gỗ to nhưng lại không mang nổi một hòn sỏi nhỏ?",
-    "options": ["Con voi", "Con kiến", "Con sông", "Con cá voi"],
+    "options": [
+      "Con voi",
+      "Con kiến",
+      "Con sông",
+      "Con cá voi"
+    ],
     "answer": 2,
     "explanation": "Con sông trôi được cây gỗ lớn trên dòng nước, nhưng hòn sỏi thì chìm ngay xuống đáy!"
   },
   {
     "id": 2,
     "question": "Cái gì đi thì nằm, đứng thì nằm, nhưng hễ nằm thì nó lại đứng?",
-    "options": ["Bàn chân", "Cây thước kẻ", "Cái bóng", "Chiếc đồng hồ"],
+    "options": [
+      "Bàn chân",
+      "Cây thước kẻ",
+      "Cái bóng",
+      "Chiếc đồng hồ"
+    ],
     "answer": 0,
     "explanation": "Bàn chân khi bạn đứng hoặc đi thì áp sát mặt đất (nằm ngang), nhưng khi bạn nằm ngủ thì bàn chân lại chổng lên trời (đứng)!"
   },
   {
     "id": 3,
     "question": "Có một đàn chuột bị điếc đi ngang qua bờ sông. Hỏi đàn đó có bao nhiêu con?",
-    "options": ["1 con", "12 con", "24 con", "Điếc làm sao đếm được"],
+    "options": [
+      "1 con",
+      "12 con",
+      "24 con",
+      "Điếc làm sao đếm được"
+    ],
     "answer": 2,
     "explanation": "Chuột điếc = hư tai = hai tư = 24 con!"
   },
   {
     "id": 4,
     "question": "Con cua đỏ dài 10cm chạy đua với con cua xanh dài 15cm. Con nào về đích trước?",
-    "options": ["Cua đỏ", "Cua xanh", "Cả 2 huề nhau", "Không con nào chạy được"],
+    "options": [
+      "Cua đỏ",
+      "Cua xanh",
+      "Cả 2 huề nhau",
+      "Không con nào chạy được"
+    ],
     "answer": 1,
     "explanation": "Con cua đỏ đã bị luộc chín rồi thì chạy làm sao được nữa!"
   },
   {
     "id": 5,
     "question": "Cái gì bạn chỉ có thể giữ được sau khi đã cho người khác?",
-    "options": ["Tiền bạc", "Bí mật", "Lời hứa", "Nụ cười"],
+    "options": [
+      "Tiền bạc",
+      "Bí mật",
+      "Lời hứa",
+      "Nụ cười"
+    ],
     "answer": 2,
     "explanation": "Bạn chỉ 'giữ lời hứa' sau khi bạn đã 'hứa (cho lời hứa)' với người khác!"
   },
   {
     "id": 6,
     "question": "Tháng nào trong năm người ta ít ngủ nhất?",
-    "options": ["Tháng 2", "Tháng 7 cô hồn", "Tháng 12 cuối năm", "Tháng 1 đầu năm"],
+    "options": [
+      "Tháng 2",
+      "Tháng 7 cô hồn",
+      "Tháng 12 cuối năm",
+      "Tháng 1 đầu năm"
+    ],
     "answer": 0,
     "explanation": "Tháng 2 chỉ có 28 hoặc 29 ngày, ít ngày nhất thì ngủ ít nhất là đúng rồi!"
   },
   {
     "id": 7,
     "question": "Bệnh gì bác sĩ trên toàn thế giới đều phải bó tay?",
-    "options": ["Bệnh tim", "Bệnh gãy tay", "Bệnh lười", "Bệnh nan y"],
+    "options": [
+      "Bệnh tim",
+      "Bệnh gãy tay",
+      "Bệnh lười",
+      "Bệnh nan y"
+    ],
     "answer": 1,
     "explanation": "Gãy tay thì bác sĩ phải lấy thạch cao bó tay lại chứ sao!"
   },
   {
     "id": 8,
     "question": "Loại quần nào có kích thước rộng lớn nhất thế giới?",
-    "options": ["Quần bò cỡ đại", "Quần đùi ông ngoại", "Quần đảo", "Quần thể sinh thái"],
+    "options": [
+      "Quần bò cỡ đại",
+      "Quần đùi ông ngoại",
+      "Quần đảo",
+      "Quần thể sinh thái"
+    ],
     "answer": 2,
     "explanation": "Quần đảo (tập hợp các hòn đảo trên biển) trải rộng hàng nghìn km vuông!"
   },
   {
     "id": 9,
     "question": "Từ gì trong tiếng Việt mà 100% người Việt Nam thông minh nhất đều phát âm sai?",
-    "options": ["Từ 'Ngoằn ngoèo'", "Từ 'Khúc khuỷu'", "Từ 'Sai'", "Từ 'Không'"],
+    "options": [
+      "Từ 'Ngoằn ngoèo'",
+      "Từ 'Khúc khuỷu'",
+      "Từ 'Sai'",
+      "Từ 'Không'"
+    ],
     "answer": 2,
     "explanation": "Phát âm từ 'Sai' thì chính là đọc chữ 'Sai' chứ còn gì nữa!"
   },
   {
     "id": 10,
     "question": "Nhà Nam có 4 anh em trai: Xuân, Hạ, Thu. Hỏi người con thứ tư tên là gì?",
-    "options": ["Đông", "Nam", "Bắc", "Không xác định"],
+    "options": [
+      "Đông",
+      "Nam",
+      "Bắc",
+      "Không xác định"
+    ],
     "answer": 1,
     "explanation": "Đầu câu đã nói rõ là 'Nhà Nam' rồi mà!"
   },
   {
     "id": 11,
     "question": "Kẻ tử tù được chọn 1 trong 3 phòng: 1 cháy dữ dội, 2 đầy sát thủ có súng, 3 đàn sư tử nhịn đói 3 năm. Phòng nào an toàn nhất?",
-    "options": ["Phòng 1 lửa cháy", "Phòng 2 sát thủ", "Phòng 3 đàn sư tử", "Chết như nhau"],
+    "options": [
+      "Phòng 1 lửa cháy",
+      "Phòng 2 sát thủ",
+      "Phòng 3 đàn sư tử",
+      "Chết như nhau"
+    ],
     "answer": 2,
     "explanation": "Sư tử mà nhịn đói suốt 3 năm thì đã thành bộ xương khô từ đời nào rồi!"
   },
   {
     "id": 12,
     "question": "Một người da đen rơi xuống Biển Đỏ, hỏi anh ta bị làm sao?",
-    "options": ["Bị chuyển thành màu tím", "Bị cá mập cắn", "Bị ướt", "Bị chìm"],
+    "options": [
+      "Bị chuyển thành màu tím",
+      "Bị cá mập cắn",
+      "Bị ướt",
+      "Bị chìm"
+    ],
     "answer": 2,
     "explanation": "Rơi xuống nước thì bị ướt chứ còn bị gì nữa!"
   },
   {
     "id": 13,
     "question": "Ước mơ lớn nhất suốt cả cuộc đời của một chú gấu trúc Panda là gì?",
-    "options": ["Được ăn thịt nướng", "Được chụp một tấm ảnh màu", "Được đi tắm biển", "Được bay lên vũ trụ"],
+    "options": [
+      "Được ăn thịt nướng",
+      "Được chụp một tấm ảnh màu",
+      "Được đi tắm biển",
+      "Được bay lên vũ trụ"
+    ],
     "answer": 1,
     "explanation": "Vì gấu trúc sinh ra chỉ toàn lông đen và trắng, chụp ảnh kiểu gì cũng chỉ ra ảnh đen trắng!"
   },
   {
     "id": 14,
     "question": "Con gì đầu dê mình ốc, đi đến đâu ai cũng phải leo trèo vất vả?",
-    "options": ["Con dốc", "Con quái vật", "Con sơn dương", "Con đường"],
+    "options": [
+      "Con dốc",
+      "Con quái vật",
+      "Con sơn dương",
+      "Con đường"
+    ],
     "answer": 0,
     "explanation": "Đầu dê (D) + Mình ốc (ỐC) = Dốc!"
   },
   {
     "id": 15,
     "question": "Cái gì chặt không đứt, bứt không rời, phơi không khô mà đốt cũng chẳng cháy?",
-    "options": ["Không khí", "Nước", "Tình bạn", "Sợi dây cao su"],
+    "options": [
+      "Không khí",
+      "Nước",
+      "Tình bạn",
+      "Sợi dây cao su"
+    ],
     "answer": 1,
     "explanation": "Nước chặt làm sao đứt, phơi nắng nước cũng bốc hơi thành nước, đốt nước thì nước dập lửa!"
   },
   {
     "id": 16,
     "question": "Cái gì lúc mua màu đen, lúc dùng màu đỏ, lúc vứt đi lại màu xám trắng?",
-    "options": ["Đôi giày", "Cục than củi", "Que diêm", "Bình ắc quy"],
+    "options": [
+      "Đôi giày",
+      "Cục than củi",
+      "Que diêm",
+      "Bình ắc quy"
+    ],
     "answer": 1,
     "explanation": "Than củi mua về màu đen, khi đốt đỏ rực, cháy tàn thành tro màu xám trắng!"
   },
@@ -126,35 +206,60 @@
   {
     "id": 18,
     "question": "Vườn thú bất ngờ bị hỏa hoạn cháy lớn, con vật nào sẽ chạy thoát ra ngoài đầu tiên?",
-    "options": ["Con báo săn", "Con khỉ", "Con người", "Con chim"],
+    "options": [
+      "Con báo săn",
+      "Con khỉ",
+      "Con người",
+      "Con chim"
+    ],
     "answer": 2,
     "explanation": "Con người có chân và biết sợ lửa nhất thì chạy đầu tiên, các con thú thì bị nhốt trong chuồng!"
   },
   {
     "id": 19,
     "question": "Bỏ ngoài nướng trong, ăn ngoài bỏ trong là món gì?",
-    "options": ["Bắp ngô nướng", "Khoai lang", "Quả chuối", "Bánh mì kẹp"],
+    "options": [
+      "Bắp ngô nướng",
+      "Khoai lang",
+      "Quả chuối",
+      "Bánh mì kẹp"
+    ],
     "answer": 0,
     "explanation": "Bắp ngô bóc vỏ ngoài đem nướng, lúc ăn thì ăn hạt bên ngoài và vứt cùi ngô bên trong!"
   },
   {
     "id": 20,
     "question": "Càng thâu càng ngắn, càng kéo càng dài, hút vào thì sướng nhả ra mịt mù là gì?",
-    "options": ["Kẹo cao su", "Điếu thuốc lá", "Dây thun kéo dài", "Sợi bún"],
+    "options": [
+      "Kẹo cao su",
+      "Điếu thuốc lá",
+      "Dây thun kéo dài",
+      "Sợi bún"
+    ],
     "answer": 1,
     "explanation": "Điếu thuốc càng hút (thâu) thì càng ngắn lại!"
   },
   {
     "id": 21,
     "question": "Loại lịch nào dài nhất trên thế giới mà không quyển lịch nào in hết?",
-    "options": ["Lịch Vạn Niên", "Lịch Sử", "Lịch Mặt Trăng", "Lịch Maya"],
+    "options": [
+      "Lịch Vạn Niên",
+      "Lịch Sử",
+      "Lịch Mặt Trăng",
+      "Lịch Maya"
+    ],
     "answer": 1,
     "explanation": "Lịch sử kéo dài từ hàng triệu năm trước đến vô tận tương lai!"
   },
   {
     "id": 22,
     "question": "Có bao nhiêu chữ C trong câu: 'Cơm canh cà cuống cái gì cũng cay'?",
-    "options": ["6 chữ", "7 chữ", "1 chữ", "5 chữ"],
+    "options": [
+      "6 chữ",
+      "7 chữ",
+      "1 chữ",
+      "5 chữ"
+    ],
     "answer": 2,
     "explanation": "Chỉ có duy nhất 1 chữ 'C' viết hoa, các chữ còn lại là chữ 'c' thường!"
   },
@@ -173,182 +278,312 @@
   {
     "id": 24,
     "question": "Cái gì luôn luôn đến nhưng không bao giờ chịu đến nơi?",
-    "options": ["Mùa đông", "Cơn mưa", "Ngày mai", "Chuyến xe buýt"],
+    "options": [
+      "Mùa đông",
+      "Cơn mưa",
+      "Ngày mai",
+      "Chuyến xe buýt"
+    ],
     "answer": 2,
     "explanation": "Vì khi 'ngày mai' đến thì nó lại trở thành 'hôm nay' rồi!"
   },
   {
     "id": 25,
     "question": "Bố mẹ có 6 người con trai, mỗi người con trai lại có 1 cô em gái. Hỏi gia đình có bao nhiêu người?",
-    "options": ["14 người", "9 người", "8 người", "12 người"],
+    "options": [
+      "14 người",
+      "9 người",
+      "8 người",
+      "12 người"
+    ],
     "answer": 1,
     "explanation": "Bố + Mẹ (2) + 6 người con trai (6) + 1 cô em gái út chung (1) = 9 người!"
   },
   {
     "id": 26,
     "question": "Con gì sinh ra đã mang tiếng xấu là chuyên đi lừa đảo người khác?",
-    "options": ["Con cáo", "Con lừa", "Con vẹt", "Con rắn"],
+    "options": [
+      "Con cáo",
+      "Con lừa",
+      "Con vẹt",
+      "Con rắn"
+    ],
     "answer": 1,
     "explanation": "Con lừa vì tên nó là 'Lừa' chứ có lừa ai đâu!"
   },
   {
     "id": 27,
     "question": "Cái gì tay trái cầm được nhưng tay phải không bao giờ cầm được?",
-    "options": ["Cổ tay phải", "Cái bút chì", "Cục than hồng", "Bàn tay trái"],
+    "options": [
+      "Cổ tay phải",
+      "Cái bút chì",
+      "Cục than hồng",
+      "Bàn tay trái"
+    ],
     "answer": 0,
     "explanation": "Tay phải làm sao tự nắm lấy cổ tay phải hoặc cùi chỏ bên phải của chính mình được!"
   },
   {
     "id": 28,
     "question": "Cái gì khi sạch thì có màu đen, mà khi bẩn thì lại có màu trắng?",
-    "options": ["Lốp xe ô tô", "Cái bảng đen", "Đôi giày da", "Bóng đêm"],
+    "options": [
+      "Lốp xe ô tô",
+      "Cái bảng đen",
+      "Đôi giày da",
+      "Bóng đêm"
+    ],
     "answer": 1,
     "explanation": "Cái bảng đen khi sạch thì đen bóng, viết phấn trắng bám bụi vào thì thành bẩn!"
   },
   {
     "id": 29,
     "question": "Loại xe nào không bao giờ giảm đi mà theo thời gian chỉ có tăng lên?",
-    "options": ["Xe máy", "Xe đạp", "Xe tăng", "Xe rùa"],
+    "options": [
+      "Xe máy",
+      "Xe đạp",
+      "Xe tăng",
+      "Xe rùa"
+    ],
     "answer": 2,
     "explanation": "Xe tăng (Tăng giá, tăng cân, tăng tuổi) chứ không có 'xe giảm'!"
   },
   {
     "id": 30,
     "question": "Một người đứng dưới trời mưa tầm tã không dù, không nón, không nấp cây mà không bị ướt một sợi tóc nào. Tại sao?",
-    "options": ["Mặc áo mưa kín mít", "Người đó bị hói đầu", "Mưa trong phim", "Chạy quá nhanh"],
+    "options": [
+      "Mặc áo mưa kín mít",
+      "Người đó bị hói đầu",
+      "Mưa trong phim",
+      "Chạy quá nhanh"
+    ],
     "answer": 1,
     "explanation": "Người đó bị trọc đầu (không có sợi tóc nào) thì làm sao ướt tóc được!"
   },
   {
     "id": 31,
     "question": "Trên bàn có 3 quả táo, bạn nhanh tay lấy đi 2 quả. Hỏi BẠN CÓ bao nhiêu quả táo?",
-    "options": ["1 quả", "2 quả", "3 quả", "0 quả"],
+    "options": [
+      "1 quả",
+      "2 quả",
+      "3 quả",
+      "0 quả"
+    ],
     "answer": 1,
     "explanation": "Bạn lấy đi 2 quả thì bạn đang cầm trên tay 2 quả táo đó!"
   },
   {
     "id": 32,
     "question": "Cái gì thuộc về quyền sở hữu của bạn nhưng người khác lại dùng nó nhiều hơn bạn?",
-    "options": ["Tiền của bạn", "Tên của bạn", "Điện thoại của bạn", "Xe của bạn"],
+    "options": [
+      "Tiền của bạn",
+      "Tên của bạn",
+      "Điện thoại của bạn",
+      "Xe của bạn"
+    ],
     "answer": 1,
     "explanation": "Tên của bạn toàn để người khác gọi chứ bạn có tự gọi tên mình mấy khi đâu!"
   },
   {
     "id": 33,
     "question": "Cái gì càng đem đi rửa thì lại càng biến thành bẩn?",
-    "options": ["Nước", "Cái khăn lau", "Miếng rửa bát", "Bàn tay"],
+    "options": [
+      "Nước",
+      "Cái khăn lau",
+      "Miếng rửa bát",
+      "Bàn tay"
+    ],
     "answer": 0,
     "explanation": "Nước đem đi rửa đồ vật thì sau đó nước sẽ bị bẩn đục ngầu!"
   },
   {
     "id": 34,
     "question": "Con mèo nào trên thế giới sợ chuột đến mức nhìn thấy là chạy mất dép?",
-    "options": ["Mèo mướp", "Mèo máy Doraemon", "Mèo Tom", "Mèo rừng"],
+    "options": [
+      "Mèo mướp",
+      "Mèo máy Doraemon",
+      "Mèo Tom",
+      "Mèo rừng"
+    ],
     "answer": 1,
     "explanation": "Mèo máy Doraemon từng bị chuột gặm mất cả đôi tai nên sợ chuột cả đời!"
   },
   {
     "id": 35,
     "question": "Cây cầu nào ngắn nhất Việt Nam mà ai ai cũng có thể sở hữu?",
-    "options": ["Cầu Rồng", "Cầu Thê Húc", "Cầu Răng", "Cầu khỉ"],
+    "options": [
+      "Cầu Rồng",
+      "Cầu Thê Húc",
+      "Cầu Răng",
+      "Cầu khỉ"
+    ],
     "answer": 2,
     "explanation": "Cầu răng (cầu răng sứ trong nha khoa) chỉ dài vài centimet nằm ngay trong miệng!"
   },
   {
     "id": 36,
     "question": "Thời phong kiến, nhà vua gọi hoàng hậu tôn quý của mình bằng gì?",
-    "options": ["Bằng ái phi", "Bằng miệng", "Bằng mật chỉ", "Bằng tên thật"],
+    "options": [
+      "Bằng ái phi",
+      "Bằng miệng",
+      "Bằng mật chỉ",
+      "Bằng tên thật"
+    ],
     "answer": 1,
     "explanation": "Không gọi bằng miệng thì gọi bằng gì bây giờ!"
   },
   {
     "id": 37,
     "question": "Có cổ nhưng không có miệng, có thân nhưng không có tay chân là cái gì?",
-    "options": ["Cái chai nước", "Con rắn", "Cây quạt máy", "Cái gối"],
+    "options": [
+      "Cái chai nước",
+      "Con rắn",
+      "Cây quạt máy",
+      "Cái gối"
+    ],
     "answer": 0,
     "explanation": "Cái chai có cổ chai, thân chai, đáy chai nhưng không có miệng để ăn!"
   },
   {
     "id": 38,
     "question": "Con đường nào dài nhất mà không một chiếc xe hiện đại nào có thể đi hết?",
-    "options": ["Đường Quốc lộ 1A", "Đường Xích Đạo", "Đường Đời", "Đường Trường Sơn"],
+    "options": [
+      "Đường Quốc lộ 1A",
+      "Đường Xích Đạo",
+      "Đường Đời",
+      "Đường Trường Sơn"
+    ],
     "answer": 2,
     "explanation": "Đường đời mỗi người trải qua một đời người, không xe cộ nào chở hết được!"
   },
   {
     "id": 39,
     "question": "Cái gì bạn vừa cất tiếng gọi tên nó là nó lập tức biến mất ngay?",
-    "options": ["Bóng tối", "Sự im lặng", "Bí mật", "Cơn gió"],
+    "options": [
+      "Bóng tối",
+      "Sự im lặng",
+      "Bí mật",
+      "Cơn gió"
+    ],
     "answer": 1,
     "explanation": "Khi bạn lên tiếng nói thì không gian không còn 'im lặng' nữa rồi!"
   },
   {
     "id": 40,
     "question": "Cái gì của bạn cứ mỗi năm lại tăng thêm một nấc mà không bao giờ giảm xuống?",
-    "options": ["Cân nặng", "Tiền lương", "Tuổi tác", "Chiều cao"],
+    "options": [
+      "Cân nặng",
+      "Tiền lương",
+      "Tuổi tác",
+      "Chiều cao"
+    ],
     "answer": 2,
     "explanation": "Tuổi tác chỉ có tăng đều theo năm tháng, không ai trẻ lại được!"
   },
   {
     "id": 41,
     "question": "Môn thể thao nào mà các vận động viên càng lùi về phía sau thì càng dễ giành chiến thắng?",
-    "options": ["Đua ngựa", "Kéo co", "Bắn cung", "Chạy nước rút"],
+    "options": [
+      "Đua ngựa",
+      "Kéo co",
+      "Bắn cung",
+      "Chạy nước rút"
+    ],
     "answer": 1,
     "explanation": "Môn kéo co: đội nào giật dây và lùi về sau được nhiều hơn là đội thắng!"
   },
   {
     "id": 42,
     "question": "Nghề nào luôn luôn nhìn xuống khách hàng của mình nhưng khách hàng vẫn tươi cười trả tiền?",
-    "options": ["Thợ cắt tóc", "Bác sĩ phẫu thuật", "Phi công", "Nhân viên spa"],
+    "options": [
+      "Thợ cắt tóc",
+      "Bác sĩ phẫu thuật",
+      "Phi công",
+      "Nhân viên spa"
+    ],
     "answer": 0,
     "explanation": "Thợ cắt tóc đứng nhìn xuống đầu khách hàng suốt buổi để cắt tỉa!"
   },
   {
     "id": 43,
     "question": "Con ngựa bị buộc vào sợi dây thừng dài 5m, đống cỏ cách nó 10m. Làm sao con ngựa ăn được cỏ?",
-    "options": ["Dây thừng dãn ra", "Đầu dây kia không buộc vào đâu", "Gió thổi cỏ lại gần", "Ngựa nhảy xa"],
+    "options": [
+      "Dây thừng dãn ra",
+      "Đầu dây kia không buộc vào đâu",
+      "Gió thổi cỏ lại gần",
+      "Ngựa nhảy xa"
+    ],
     "answer": 1,
     "explanation": "Đầu dây thừng kia không hề bị buộc vào cọc nào, ngựa cứ thế đi tới ăn thôi!"
   },
   {
     "id": 44,
     "question": "Cái gì có rất nhiều răng nhưng từ lúc sinh ra đến hỏng không bao giờ nhai được?",
-    "options": ["Chiếc lược chải đầu", "Lưỡi cưa", "Bánh răng đồng hồ", "Cả 3 phương án trên"],
+    "options": [
+      "Chiếc lược chải đầu",
+      "Lưỡi cưa",
+      "Bánh răng đồng hồ",
+      "Cả 3 phương án trên"
+    ],
     "answer": 3,
     "explanation": "Lược, cưa, bánh răng đều có răng nhưng chỉ dùng để chải, cắt, truyền động chứ không nhai!"
   },
   {
     "id": 45,
     "question": "Nếu bạn vượt qua người đang chạy ở vị trí thứ hai trong một cuộc đua, bạn đứng thứ mấy?",
-    "options": ["Vị trí thứ nhất", "Vị trí thứ hai", "Vị trí thứ ba", "Về đích"],
+    "options": [
+      "Vị trí thứ nhất",
+      "Vị trí thứ hai",
+      "Vị trí thứ ba",
+      "Về đích"
+    ],
     "answer": 1,
     "explanation": "Bạn vượt qua người thứ hai thì bạn thế chỗ của họ, tức là bạn đứng thứ hai!"
   },
   {
     "id": 46,
     "question": "Hành động gì 'trên nhấp nhấp, dưới giật giật' khiến người ta hồi hộp chờ đợi?",
-    "options": ["Đang câu cá", "Đang may quần áo", "Đang tập thể hình", "Đang đánh đu"],
+    "options": [
+      "Đang câu cá",
+      "Đang may quần áo",
+      "Đang tập thể hình",
+      "Đang đánh đu"
+    ],
     "answer": 0,
     "explanation": "Phao câu cá nhấp nhô trên mặt nước, cần thủ ở dưới giật cần câu bắt cá!"
   },
   {
     "id": 47,
     "question": "Cái gì của người chồng mà các bà vợ thích giữ và thích tiêu nhất?",
-    "options": ["Thẻ lương của chồng", "Chìa khóa xe", "Điện thoại chồng", "Đồng hồ đeo tay"],
+    "options": [
+      "Thẻ lương của chồng",
+      "Chìa khóa xe",
+      "Điện thoại chồng",
+      "Đồng hồ đeo tay"
+    ],
     "answer": 0,
     "explanation": "Thẻ lương và tiền lương của chồng thì các bà vợ quản lý và tiêu là chuẩn bài!"
   },
   {
     "id": 48,
     "question": "Con gì đập thì sống, không đập thì chết?",
-    "options": ["Con tim", "Con đập thủy điện", "Con muỗi", "Con cua"],
+    "options": [
+      "Con tim",
+      "Con đập thủy điện",
+      "Con muỗi",
+      "Con cua"
+    ],
     "answer": 0,
     "explanation": "Trái tim (con tim) phải đập liên tục thì người mới sống, ngừng đập là ngỏm!"
   },
   {
     "id": 49,
     "question": "Cái gì chỉ tăng giá trị khi nó bị rách hoặc vỡ ra?",
-    "options": ["Quả trứng gà", "Chiếc áo rách", "Gương soi", "Đồng tiền"],
+    "options": [
+      "Quả trứng gà",
+      "Chiếc áo rách",
+      "Gương soi",
+      "Đồng tiền"
+    ],
     "answer": 0,
     "explanation": "Quả trứng vỡ vỏ ra thì mới chiên, luộc hoặc ấp nở thành gà con có giá trị!"
   },
@@ -363,5 +598,1805 @@
     ],
     "answer": 1,
     "explanation": "Đưa cho 4 bạn đầu mỗi người 1 quả, bạn thứ năm nhận quả táo còn lại nằm nguyên trong giỏ!"
+  },
+  {
+    "id": 51,
+    "question": "Con mèo nào không bao giờ bắt chuột mà trẻ con lẫn người lớn khắp thế giới đều mê?",
+    "options": [
+      "Mèo mướp",
+      "Mèo máy Doraemon",
+      "Mèo Tom",
+      "Mèo thần tài"
+    ],
+    "answer": 1,
+    "explanation": "Mèo máy Doraemon sợ chuột nhất trần đời, chỉ thích ăn bánh rán dorayaki!"
+  },
+  {
+    "id": 52,
+    "question": "Con gì sinh ra đã có số hưởng, chỉ việc ngủ và ăn mà ai cũng khen dễ thương?",
+    "options": [
+      "Con heo",
+      "Con gấu trúc Panda",
+      "Con mèo",
+      "Con lười"
+    ],
+    "answer": 1,
+    "explanation": "Gấu trúc Panda cả ngày chỉ gặm trúc và lăn lộn ngủ mà là quốc bảo vạn người mê!"
+  },
+  {
+    "id": 53,
+    "question": "Cái gì người mua biết, người bán biết, nhưng người dùng nó thì chẳng bao giờ biết?",
+    "options": [
+      "Quan tài",
+      "Thuốc ngủ",
+      "Món quà sinh nhật",
+      "Kính cận"
+    ],
+    "answer": 0,
+    "explanation": "Người nằm trong quan tài thì đã qua đời rồi, làm sao mà biết được nữa!"
+  },
+  {
+    "id": 54,
+    "question": "Lịch nào dài nhất trong tất cả các loại lịch?",
+    "options": [
+      "Lịch vạn niên",
+      "Lịch sử",
+      "Lịch treo tường",
+      "Lịch bloc"
+    ],
+    "answer": 1,
+    "explanation": "Lịch sử kéo dài từ hàng triệu năm trước cho đến tận tương lai!"
+  },
+  {
+    "id": 55,
+    "question": "Cái gì luôn luôn đến mà không bao giờ thực sự tới?",
+    "options": [
+      "Ngày mai",
+      "Mùa xuân",
+      "Cơn mưa",
+      "Chuyến tàu"
+    ],
+    "answer": 0,
+    "explanation": "Vì khi 'ngày mai' tới thì nó đã trở thành 'hôm nay' mất rồi!"
+  },
+  {
+    "id": 56,
+    "question": "Loài sinh vật nào nguy hiểm và khó chiều nhất hành tinh?",
+    "options": [
+      "Hổ răng kiếm",
+      "Cá mập trắng",
+      "Sư tử đực",
+      "Người yêu lúc đói bụng"
+    ],
+    "answer": 3,
+    "explanation": "Người yêu mà đói bụng thì bất kỳ ai cũng có thể trở thành nạn nhân!"
+  },
+  {
+    "id": 57,
+    "question": "Cái gì tay trái cầm được nhưng tay phải không bao giờ cầm được?",
+    "options": [
+      "Cổ tay phải",
+      "Cùi chỏ tay phải",
+      "Ngón tay cái",
+      "Bàn tay phải"
+    ],
+    "answer": 1,
+    "explanation": "Tay phải không thể nào tự vươn tới để cầm chính cùi chỏ của tay phải được!"
+  },
+  {
+    "id": 58,
+    "question": "Núi nào bị chặt ra từng khúc nhiều nhất ở Việt Nam?",
+    "options": [
+      "Núi Ba Vì",
+      "Núi Thái Sơn",
+      "Núi Ngũ Hành Sơn",
+      "Núi Bạch Mã"
+    ],
+    "answer": 1,
+    "explanation": "Thái Sơn = Thái (chặt/cắt nhỏ) Sơn!"
+  },
+  {
+    "id": 59,
+    "question": "Ở đâu ngày hôm nay lại đến trước ngày hôm qua?",
+    "options": [
+      "Trên Sao Hỏa",
+      "Trong từ điển",
+      "Tại đường xích đạo",
+      "Ở Nam Cực"
+    ],
+    "answer": 1,
+    "explanation": "Trong từ điển tiếng Việt xếp theo vần: chữ 'Hôm nay' đứng trước chữ 'Hôm qua'!"
+  },
+  {
+    "id": 60,
+    "question": "Con gì ăn lửa và uống cả nước than?",
+    "options": [
+      "Con rồng",
+      "Tàu hỏa chạy bằng hơi nước",
+      "Con kỳ lân",
+      "Con thiêu thân"
+    ],
+    "answer": 1,
+    "explanation": "Đầu máy tàu hỏa hơi nước thời xưa đốt than đỏ rực và dùng nước tạo áp suất hơi!"
+  },
+  {
+    "id": 61,
+    "question": "Loại đồ uống giải khát nào chứa cả sắt (Fe) và canxi (Ca)?",
+    "options": [
+      "Nước tăng lực",
+      "Cà phê",
+      "Trà đào",
+      "Nước ép cam"
+    ],
+    "answer": 1,
+    "explanation": "Cafe = Ca (Canxi) + Fe (Sắt) trong bảng tuần hoàn hóa học!"
+  },
+  {
+    "id": 62,
+    "question": "Cái gì càng thổi càng to, thổi quá tay thì nổ tung tóe?",
+    "options": [
+      "Bóng bay",
+      "Bong bóng xà phòng",
+      "Chuyện bé xé ra to",
+      "Cả 3 phương án trên"
+    ],
+    "answer": 3,
+    "explanation": "Cả bóng bay lẫn drama chuyện bé xé ra to đều nổ banh xác nếu bị thổi quá đà!"
+  },
+  {
+    "id": 63,
+    "question": "Trận bóng đá giữa đội Chuột và đội Voi, tại sao voi lại bỏ chạy đầu hàng?",
+    "options": [
+      "Voi đá phản lưới",
+      "Chuột chạy nhanh hơn",
+      "Voi sợ chuột chui vào vòi",
+      "Chuột chơi xấu"
+    ],
+    "answer": 2,
+    "explanation": "Theo truyền thuyết dân gian, voi sợ nhất chuột chui vào vòi làm ngạt thở!"
+  },
+  {
+    "id": 64,
+    "question": "Có cánh mà chẳng biết bay, suốt ngày ngụp lặn ở nơi lạnh lùng. Là chim gì?",
+    "options": [
+      "Chim cánh cụt",
+      "Chim hải âu",
+      "Chim đà điểu",
+      "Chim bói cá"
+    ],
+    "answer": 0,
+    "explanation": "Chim cánh cụt có cánh nhưng chỉ dùng để bơi lặn săn cá dưới biển băng Nam Cực!"
+  },
+  {
+    "id": 65,
+    "question": "Cái gì bạn có thể chia sẻ lên Facebook nhưng lại sợ sếp nhìn thấy nhất?",
+    "options": [
+      "Ảnh đi biển khi đang xin nghỉ ốm",
+      "Ảnh mèo cưng",
+      "Meme công nghệ",
+      "Bài hát yêu thích"
+    ],
+    "answer": 0,
+    "explanation": "Xin nghỉ ốm mà check-in tắm biển Phú Quốc thì coi như xác định nhận quyết định thôi việc!"
+  },
+  {
+    "id": 66,
+    "question": "Cái gì chặt không đứt, bứt không rời, phơi không khô, đốt không cháy?",
+    "options": [
+      "Dòng nước",
+      "Sợi xích",
+      "Không khí",
+      "Cục đá"
+    ],
+    "answer": 0,
+    "explanation": "Dòng nước ở thể lỏng thì lấy dao chém hay bứt tay vào vẫn liền lại ngay lập tức!"
+  },
+  {
+    "id": 67,
+    "question": "Con ma nào không biết dọa người mà suốt ngày chỉ lo tìm đồ ăn?",
+    "options": [
+      "Ma xó",
+      "Ma đói",
+      "Ma-nơ-canh",
+      "Ma Cà Rồng"
+    ],
+    "answer": 1,
+    "explanation": "Ma đói chỉ mải mê tìm đồ ăn chứ không rảnh đi hù dọa ai!"
+  },
+  {
+    "id": 68,
+    "question": "Xã nào đông dân nhất và quy tụ nhiều tầng lớp nhất?",
+    "options": [
+      "Xã hội",
+      "Xã Đàn",
+      "Xã Thạnh An",
+      "Xã Kim Liên"
+    ],
+    "answer": 0,
+    "explanation": "Xã hội bao gồm toàn bộ loài người trên Trái Đất!"
+  },
+  {
+    "id": 69,
+    "question": "Cái gì có cổ nhưng không có đầu, có tay nhưng không có ngón?",
+    "options": [
+      "Cái áo sơ mi",
+      "Cái chai thủy tinh",
+      "Cái ấm trà",
+      "Bình hoa cổ"
+    ],
+    "answer": 0,
+    "explanation": "Chiếc áo sơ mi có cổ áo và tay áo, nhưng không có đầu và ngón tay!"
+  },
+  {
+    "id": 70,
+    "question": "Bỏ ngoài nướng trong, ăn ngoài bỏ trong là món gì?",
+    "options": [
+      "Bắp cải",
+      "Bắp ngô (ngô nướng)",
+      "Bắp chuối",
+      "Bắp bò"
+    ],
+    "answer": 1,
+    "explanation": "Bắp ngô: bóc vỏ ngoài nướng hạt bên trong; khi ăn ăn hạt ngoài vứt cùi bên trong!"
+  },
+  {
+    "id": 71,
+    "question": "Con đường nào ngắn nhất nhưng lại khó đi nhất trên đời?",
+    "options": [
+      "Đường lên đỉnh Olympia",
+      "Đường vào tim em",
+      "Đường cao tốc",
+      "Đường hầm xuyên núi"
+    ],
+    "answer": 1,
+    "explanation": "Đường vào tim em lắm lối rẽ và đầy cạm bẫy, khó đi hơn mọi con đường!"
+  },
+  {
+    "id": 72,
+    "question": "Thứ gì chứa đầy chìa khóa nhưng lại không bao giờ mở được một ổ khóa nào?",
+    "options": [
+      "Bàn phím máy tính",
+      "Đàn piano",
+      "Chùm chìa khóa hỏng",
+      "Cả A và B đều đúng"
+    ],
+    "answer": 3,
+    "explanation": "Bàn phím (key) và đàn piano (keys) đều có phím/chìa nhưng chỉ dùng để gõ và gảy đàn!"
+  },
+  {
+    "id": 73,
+    "question": "Một người đàn ông đi dưới mưa tầm tã mà không hề che ô hay đội mũ, tại sao tóc không ướt?",
+    "options": [
+      "Vì anh ta chạy nhanh",
+      "Vì anh ta bị hói đầu",
+      "Vì anh ta đi trong xe",
+      "Vì mưa nhỏ"
+    ],
+    "answer": 1,
+    "explanation": "Người bị hói đầu không có cọng tóc nào thì lấy đâu ra tóc để ướt!"
+  },
+  {
+    "id": 74,
+    "question": "Trái gì thích đi du lịch vòng quanh thế giới nhất?",
+    "options": [
+      "Trái dưa hấu",
+      "Trái Đất",
+      "Trái tim",
+      "Trái xoài"
+    ],
+    "answer": 1,
+    "explanation": "Trái Đất vừa tự quay vừa quay quanh Mặt Trời liên tục suốt hàng tỷ năm!"
+  },
+  {
+    "id": 75,
+    "question": "Cái gì của bạn nhưng người khác lại dùng nhiều hơn chính bạn?",
+    "options": [
+      "Tiền của bạn",
+      "Tên của bạn",
+      "Điện thoại của bạn",
+      "Xe máy của bạn"
+    ],
+    "answer": 1,
+    "explanation": "Tên của bạn thì người khác gọi suốt ngày, còn bạn hiếm khi tự xưng tên mình!"
+  },
+  {
+    "id": 76,
+    "question": "Bánh gì ăn vào không no nhưng lại khiến người ta xấu hổ hoặc sợ hãi?",
+    "options": [
+      "Bánh vẽ",
+      "Bánh bao",
+      "Bánh bèo",
+      "Bánh đúc"
+    ],
+    "answer": 0,
+    "explanation": "'Ăn bánh vẽ' là bị người ta hứa suông lừa gạt viễn cảnh không có thật!"
+  },
+  {
+    "id": 77,
+    "question": "Loại xe nào không bao giờ tiêu tốn xăng dầu hay điện mà vẫn chạy ầm ầm?",
+    "options": [
+      "Xe đạp",
+      "Xe tăng",
+      "Xe lăn",
+      "Xe ngựa kéo"
+    ],
+    "answer": 0,
+    "explanation": "Xe đạp chỉ tốn sức đạp bằng cơm chứ không tốn giọt xăng nào!"
+  },
+  {
+    "id": 78,
+    "question": "Cái gì bạn càng lau chùi thì nó lại càng trở nên ướt át hơn?",
+    "options": [
+      "Khăn lau bát",
+      "Mặt gương",
+      "Cái bàn",
+      "Mắt kính"
+    ],
+    "answer": 0,
+    "explanation": "Khăn lau hút hết nước từ đồ vật nên càng lau thì khăn càng thấm đẫm nước!"
+  },
+  {
+    "id": 79,
+    "question": "Con gì biết nói đủ thứ tiếng trên đời mà không cần học bất kỳ trường lớp nào?",
+    "options": [
+      "Con vẹt",
+      "Con người thông thái",
+      "Tiếng vang (tiếng vọng)",
+      "Google Dịch"
+    ],
+    "answer": 2,
+    "explanation": "Tiếng vọng trong hang núi: bạn hét tiếng gì nó nhại lại y nguyên tiếng đó!"
+  },
+  {
+    "id": 80,
+    "question": "Cái gì thuộc về tương lai mà ai cũng mong ước, nhưng khi đến nơi lại già đi một tuổi?",
+    "options": [
+      "Năm mới",
+      "Ngày mai",
+      "Lương tháng tới",
+      "Kỳ nghỉ hè"
+    ],
+    "answer": 0,
+    "explanation": "Đón năm mới Tết đến là ai cũng tự động tăng thêm một tuổi!"
+  },
+  {
+    "id": 81,
+    "question": "Cái gì có một mắt nhưng không thể nhìn thấy bất cứ thứ gì?",
+    "options": [
+      "Cây kim may",
+      "Cơn bão",
+      "Củ khoai tây",
+      "Cả 3 phương án trên"
+    ],
+    "answer": 3,
+    "explanation": "Lỗ kim gọi là mắt kim, tâm bão gọi là mắt bão, mầm khoai gọi là mắt khoai — đều mù tịt!"
+  },
+  {
+    "id": 82,
+    "question": "Hạt gì không bao giờ nảy mầm thành cây được?",
+    "options": [
+      "Hạt mưa",
+      "Hạt tiêu",
+      "Hạt lúa",
+      "Hạt dưa"
+    ],
+    "answer": 0,
+    "explanation": "Hạt mưa rơi xuống đất thấm vào lòng đất chứ không mọc thành cây mưa được!"
+  },
+  {
+    "id": 83,
+    "question": "Cái gì chặt đầu, chặt đuôi, chặt cả mình mà vẫn sống nhăn răng?",
+    "options": [
+      "Con đỉa",
+      "Cây mía",
+      "Con giun đất",
+      "Bắp chuối"
+    ],
+    "answer": 1,
+    "explanation": "Cây mía chặt ngọn, chặt gốc, róc vỏ chặt khúc ăn ngọt lịm!"
+  },
+  {
+    "id": 84,
+    "question": "Cầu gì biết chạy và phát ra tiếng còi inh ỏi?",
+    "options": [
+      "Cầu thủ bóng đá",
+      "Cầu phao",
+      "Cầu trượt",
+      "Cầu bập bênh"
+    ],
+    "answer": 0,
+    "explanation": "Cầu thủ bóng đá chạy khắp sân cỏ đuổi theo trái bóng!"
+  },
+  {
+    "id": 85,
+    "question": "Ở một căn phòng tối thui, bạn có 1 que diêm, 1 bếp dầu, 1 cây nến và 1 đống củi. Bạn thắp cái gì trước?",
+    "options": [
+      "Cây nến",
+      "Bếp dầu",
+      "Que diêm",
+      "Đống củi"
+    ],
+    "answer": 2,
+    "explanation": "Bạn phải quẹt que diêm cháy trước thì mới có lửa để thắp những thứ kia!"
+  },
+  {
+    "id": 86,
+    "question": "Có bao nhiêu chữ C trong câu: 'Cơm, canh, cháo, chè, cái gì cũng ngon'?",
+    "options": [
+      "5 chữ C",
+      "6 chữ C",
+      "1 chữ C",
+      "7 chữ C"
+    ],
+    "answer": 2,
+    "explanation": "Chỉ có đúng 1 chữ 'C' viết hoa trong cả câu đó!"
+  },
+  {
+    "id": 87,
+    "question": "Môn thể thao nào mà các vận động viên càng lùi xa thì càng tiến gần đến chiến thắng?",
+    "options": [
+      "Bắn cung",
+      "Kéo co",
+      "Chạy nước rút",
+      "Nhảy cao"
+    ],
+    "answer": 1,
+    "explanation": "Trong môn kéo co, đội nào giật lùi kéo đối phương qua vạch thì đội đó thắng!"
+  },
+  {
+    "id": 88,
+    "question": "Con vịt đi trước 2 con vịt, con vịt đi sau 2 con vịt, con vịt đi giữa 2 con vịt. Hỏi có mấy con vịt?",
+    "options": [
+      "3 con vịt",
+      "4 con vịt",
+      "5 con vịt",
+      "6 con vịt"
+    ],
+    "answer": 0,
+    "explanation": "Chỉ có 3 con vịt đi nối đuôi thành 1 hàng dọc!"
+  },
+  {
+    "id": 89,
+    "question": "Cái gì đen khi bạn mua nó, đỏ khi bạn dùng nó, và xám xịt khi bạn vứt nó đi?",
+    "options": [
+      "Hòn than củi",
+      "Điếu thuốc lá",
+      "Miếng thịt bò",
+      "Bóng đèn sợi đốt"
+    ],
+    "answer": 0,
+    "explanation": "Than mua về màu đen, nhóm lửa cháy đỏ rực, tàn tro nguội màu xám trắng!"
+  },
+  {
+    "id": 90,
+    "question": "Hai người đào trong 2 giờ thì được 1 cái hố. Hỏi 4 người đào trong 4 giờ thì được mấy cái hố?",
+    "options": [
+      "1 cái hố to hơn",
+      "2 cái hố",
+      "4 cái hố",
+      "8 cái hố"
+    ],
+    "answer": 0,
+    "explanation": "Dù bao nhiêu người đào đi nữa thì vẫn chỉ là 1 cái hố (nhưng to và sâu hơn)!"
+  },
+  {
+    "id": 91,
+    "question": "Cái gì có mặt nhưng không có miệng, có 3 chân nhưng không biết đi?",
+    "options": [
+      "Cái kiềng 3 chân",
+      "Chiếc đồng hồ",
+      "Cái bàn tròn 3 chân",
+      "Bếp ga mini"
+    ],
+    "answer": 1,
+    "explanation": "Mặt đồng hồ và 3 cái kim (chân) quay tròn chỉ giờ, phút, giây!"
+  },
+  {
+    "id": 92,
+    "question": "Vợ của chú gọi là thím, vợ của bác gọi là bác gái. Vậy vợ của ba gọi là gì?",
+    "options": [
+      "Mẹ của mình",
+      "Bà cô",
+      "Dì ruột",
+      "Bác dâu"
+    ],
+    "answer": 0,
+    "explanation": "Vợ của ba mình thì chính là mẹ ruột của mình chứ ai nữa!"
+  },
+  {
+    "id": 93,
+    "question": "Cái gì chứa nhiều nước nhất mà con người không thể uống nổi một ngụm nào?",
+    "options": [
+      "Bản đồ thế giới",
+      "Biển Chết",
+      "Đại dương",
+      "Hồ nước ngầm"
+    ],
+    "answer": 0,
+    "explanation": "Đại dương trên bản đồ thế giới vẽ toàn nước xanh rì nhưng chỉ là giấy vẽ!"
+  },
+  {
+    "id": 94,
+    "question": "Quần gì không bao giờ dùng để mặc lên người?",
+    "options": [
+      "Quần đảo",
+      "Quần chúng",
+      "Quần thể",
+      "Cả 3 phương án trên"
+    ],
+    "answer": 3,
+    "explanation": "Quần đảo, quần chúng, quần thể đều là danh từ chỉ tập hợp chứ không phải trang phục!"
+  },
+  {
+    "id": 95,
+    "question": "Cái gì bay khi sinh ra, nằm khi còn sống, và chạy khi đã chết đi?",
+    "options": [
+      "Bông tuyết",
+      "Hạt mưa",
+      "Lá cây rụng",
+      "Đám mây"
+    ],
+    "answer": 0,
+    "explanation": "Bông tuyết bay lơ lửng trên trời, rơi xuống nằm trên mặt đất, khi tan chảy biến thành dòng nước chảy!"
+  },
+  {
+    "id": 96,
+    "question": "Có đầu mà chẳng có đuôi, có một khúc ruột nuôi người quanh năm. Là cái gì?",
+    "options": [
+      "Cái áo ấm",
+      "Cái bánh mì",
+      "Chiếc đũa",
+      "Cây kim may"
+    ],
+    "answer": 1,
+    "explanation": "Ổ bánh mì có ruột trắng bên trong cung cấp tinh bột cho bữa ăn ngon lành!"
+  },
+  {
+    "id": 97,
+    "question": "Cái gì bạn nhìn thấy bằng mắt thường nhưng không bao giờ chạm tay vào được?",
+    "options": [
+      "Cái bóng của chính bạn",
+      "Đường chân trời",
+      "Cầu vồng",
+      "Cả 3 phương án trên"
+    ],
+    "answer": 3,
+    "explanation": "Bóng, cầu vồng và đường chân trời chỉ nhìn thấy qua hiện tượng quang học chứ không chạm được!"
+  },
+  {
+    "id": 98,
+    "question": "Loài rùa nào có thể chạy nhanh hơn cả loài báo hoa mai?",
+    "options": [
+      "Rùa biển",
+      "Rùa núi vàng",
+      "Rùa trong truyện Rùa và Thỏ",
+      "Rùa Ninja"
+    ],
+    "answer": 2,
+    "explanation": "Trong truyện ngụ ngôn, chú Rùa kiên trì đã chạy về đích trước chú Thỏ huênh hoang!"
+  },
+  {
+    "id": 99,
+    "question": "Bà đó đi chợ gặp con cò mù, hỏi tại sao bà ấy lập tức quay đầu đi về?",
+    "options": [
+      "Vì bà sợ xui xẻo",
+      "Vì cò mù là cò không thấy, không thấy là thầy không có",
+      "Vì trời sắp mưa to",
+      "Vì chợ đóng cửa"
+    ],
+    "answer": 1,
+    "explanation": "Cò mù = Cò không thấy = Thầy không có (chơi chữ đố mẹo dân gian)!"
+  },
+  {
+    "id": 100,
+    "question": "Nếu nửa đêm lúc 12h trời mưa tầm tã, liệu 72 giờ sau trời có thể nắng chói chang được không?",
+    "options": [
+      "Có thể",
+      "Chắc chắn nắng",
+      "Không bao giờ",
+      "Tùy thời tiết"
+    ],
+    "answer": 2,
+    "explanation": "72 giờ sau chính xác là 3 ngày đêm trôi qua, lúc đó vẫn là 12h đêm thì làm sao có nắng chói chang được!"
+  },
+  {
+    "id": 101,
+    "question": "Cái gì chỉ đi lên mà không bao giờ đi xuống trong suốt cuộc đời con người?",
+    "options": [
+      "Huyết áp",
+      "Tuổi tác",
+      "Cân nặng",
+      "Chiều cao"
+    ],
+    "answer": 1,
+    "explanation": "Tuổi tác chỉ có tăng thêm từng năm chứ không bao giờ trẻ lại được!"
+  },
+  {
+    "id": 102,
+    "question": "Trái gì lúc chưa chín thì xanh, khi chín thì đỏ, mà ăn vào thì cay xè lưỡi?",
+    "options": [
+      "Trái ớt",
+      "Trái cà chua",
+      "Trái dưa hấu",
+      "Trái táo"
+    ],
+    "answer": 0,
+    "explanation": "Trái ớt khi còn non màu xanh, già chín đỏ rực và chứa chất capsaicin siêu cay!"
+  },
+  {
+    "id": 103,
+    "question": "Cái gì chứa nhiều từ ngữ và kiến thức nhất mà chẳng phát ra một âm thanh nào?",
+    "options": [
+      "Cuốn từ điển",
+      "Chiếc tivi tắt nguồn",
+      "Điện thoại hết pin",
+      "Bức tranh sơn dầu"
+    ],
+    "answer": 0,
+    "explanation": "Cuốn từ điển chứa hàng chục nghìn từ ngữ giải nghĩa nhưng nằm im thin thít!"
+  },
+  {
+    "id": 104,
+    "question": "Loại chim nào không bao giờ biết xây tổ mà lại đi đẻ nhờ trứng vào tổ chim khác?",
+    "options": [
+      "Chim tu hú",
+      "Chim bồ câu",
+      "Chim sẻ",
+      "Chim chích chòe"
+    ],
+    "answer": 0,
+    "explanation": "Chim tu hú chuyên đẻ lén trứng vào tổ chim chích nhờ nuôi hộ con non!"
+  },
+  {
+    "id": 105,
+    "question": "Vua gọi hoàng hậu bằng gì trong hoàng cung triều đình?",
+    "options": [
+      "Bằng miệng",
+      "Bằng ái khanh",
+      "Bằng nương tử",
+      "Bằng lệnh bài"
+    ],
+    "answer": 0,
+    "explanation": "Muốn gọi ai thì vua cũng phải mở miệng ra gọi chứ gọi bằng gì!"
+  },
+  {
+    "id": 106,
+    "question": "Cái gì nằm giữa ranh giới của trời và đất?",
+    "options": [
+      "Không khí",
+      "Chữ 'và'",
+      "Mây mù",
+      "Đường chân trời"
+    ],
+    "answer": 1,
+    "explanation": "Nằm giữa từ 'trời' và từ 'đất' chính là chữ 'và'!"
+  },
+  {
+    "id": 107,
+    "question": "Một người nhảy từ tầng 10 của tòa nhà chọc trời xuống mặt đất mà không hề bị thương. Tại sao?",
+    "options": [
+      "Có đệm hơi đỡ",
+      "Nhảy từ cửa sổ hướng vào trong phòng",
+      "Anh ta là siêu nhân",
+      "Được dù kéo lại"
+    ],
+    "answer": 1,
+    "explanation": "Anh ta đứng ngoài ban công nhảy ngược vào trong sàn phòng tầng 10!"
+  },
+  {
+    "id": 108,
+    "question": "Xe nào có 4 bánh nhưng lại chỉ chở được đúng 2 người?",
+    "options": [
+      "Xe đồ chơi",
+      "Xe ô tô 2 chỗ (roadster)",
+      "Xe lăn đôi",
+      "Cả A và B đều đúng"
+    ],
+    "answer": 3,
+    "explanation": "Cả xe thể thao mini 2 chỗ lẫn xe đồ chơi đều có 4 bánh và chở tối đa 2 người!"
+  },
+  {
+    "id": 109,
+    "question": "Cây gì không có lá, không có hoa, nhưng hễ mọc lên là chủ nhà lại lo sốt vó?",
+    "options": [
+      "Cây nợ",
+      "Cây cột điện",
+      "Cây nấm độc",
+      "Cây gậy"
+    ],
+    "answer": 0,
+    "explanation": "'Cây nợ' hay nợ nần chồng chất mọc lên làm ai cũng mất ăn mất ngủ!"
+  },
+  {
+    "id": 110,
+    "question": "Bệnh gì người mắc phải thích đi khoe khắp nơi trên mạng xã hội?",
+    "options": [
+      "Bệnh sống ảo",
+      "Bệnh cảm cúm",
+      "Bệnh đau đầu",
+      "Bệnh viêm họng"
+    ],
+    "answer": 0,
+    "explanation": "'Bệnh sống ảo' chụp 100 tấm ảnh chỉnh sửa 3 tiếng rồi đăng story khoe bạn bè!"
+  },
+  {
+    "id": 111,
+    "question": "Cái gì buổi sáng đi bằng 4 chân, buổi trưa đi bằng 2 chân, buổi tối đi bằng 3 chân?",
+    "options": [
+      "Con người",
+      "Con chó",
+      "Cái bàn",
+      "Con khỉ"
+    ],
+    "answer": 0,
+    "explanation": "Câu đố Nhân Sư nổi tiếng: Con người lúc bé bò 4 chân, lớn đi 2 chân, già chống thêm gậy thành 3 chân!"
+  },
+  {
+    "id": 112,
+    "question": "Cái gì luôn đứng yên ở một góc phòng nhưng lại chu du khắp thế giới?",
+    "options": [
+      "Con tem bưu chính",
+      "Chiếc va li du lịch",
+      "Quả địa cầu",
+      "Tấm bưu thiếp"
+    ],
+    "answer": 0,
+    "explanation": "Con tem dán ở góc trên phong bì thư được gửi đi khắp năm châu bốn biển!"
+  },
+  {
+    "id": 113,
+    "question": "Làm thế nào để nhét một con voi khổng lồ vào trong chiếc tủ lạnh chỉ với 3 bước?",
+    "options": [
+      "Mở tủ lạnh ra, nhét voi vào, đóng tủ lạnh lại",
+      "Cắt nhỏ con voi",
+      "Mua tủ lạnh to hơn con voi",
+      "Không thể nhét được"
+    ],
+    "answer": 0,
+    "explanation": "Đúng 3 bước kinh điển: 1. Mở tủ lạnh -> 2. Nhét voi vào -> 3. Đóng tủ lạnh lại!"
+  },
+  {
+    "id": 114,
+    "question": "Tiếp tục câu chuyện tủ lạnh: Làm thế nào để nhét một con hươu cao cổ vào tủ lạnh chỉ với 4 bước?",
+    "options": [
+      "Mở tủ, bỏ voi ra, nhét hươu vào, đóng tủ lại",
+      "Gập cổ con hươu lại",
+      "Dùng phép thuật biến nhỏ",
+      "Mua thêm tủ lạnh thứ hai"
+    ],
+    "answer": 0,
+    "explanation": "4 bước: 1. Mở tủ -> 2. Lấy con voi ra -> 3. Nhét con hươu vào -> 4. Đóng tủ lại!"
+  },
+  {
+    "id": 115,
+    "question": "Chúa tể muôn loài Sư Tử mở đại hội muôn thú, con vật nào vắng mặt không tham dự?",
+    "options": [
+      "Con hổ",
+      "Con hươu cao cổ",
+      "Con chim ưng",
+      "Con cá mập"
+    ],
+    "answer": 1,
+    "explanation": "Vì con hươu cao cổ vẫn đang bị nhốt trong tủ lạnh ở câu đố trước!"
+  },
+  {
+    "id": 116,
+    "question": "Có một dòng sông đầy cá sấu ăn thịt hung dữ, làm sao một người đàn ông bơi qua bờ sông an toàn?",
+    "options": [
+      "Đi thuyền máy",
+      "Cá sấu đang bận đi họp đại hội muôn thú của Sư Tử",
+      "Đeo áo giáp sắt",
+      "Chờ nước cạn"
+    ],
+    "answer": 1,
+    "explanation": "Đàn cá sấu đã đi dự đại hội muôn thú của Sư Tử hết rồi, cứ bơi qua thoải mái!"
+  },
+  {
+    "id": 117,
+    "question": "Người đàn ông bơi qua sông cá sấu an toàn, nhưng tại sao khi vừa lên bờ lại ngất xỉu?",
+    "options": [
+      "Bị cảm lạnh",
+      "Bị con hươu cao cổ rơi trúng đầu",
+      "Bị chuột rút",
+      "Mệt quá sức"
+    ],
+    "answer": 1,
+    "explanation": "Con hươu cao cổ nhảy từ trong tủ lạnh ra rơi trúng đầu anh ta!"
+  },
+  {
+    "id": 118,
+    "question": "Cái gì càng lấy ra nhiều thì nó lại càng trở nên to hơn?",
+    "options": [
+      "Cái hố đất",
+      "Cái bóp tiền",
+      "Cái túi bánh",
+      "Cái balo"
+    ],
+    "answer": 0,
+    "explanation": "Càng xúc đất lấy ra khỏi hố thì cái hố càng ngày càng to và sâu thêm!"
+  },
+  {
+    "id": 119,
+    "question": "Thứ gì không ai muốn có, nhưng khi lỡ có rồi thì lại chẳng ai muốn làm mất nó?",
+    "options": [
+      "Một vụ kiện tụng",
+      "Cơn đau bụng",
+      "Kẻ thù",
+      "Vết sẹo"
+    ],
+    "answer": 0,
+    "explanation": "Chẳng ai muốn dính vào kiện tụng tụt dốc, nhưng khi đã kiện thì không ai muốn thua (mất) cả!"
+  },
+  {
+    "id": 120,
+    "question": "Cái gì thuộc về con cá nhưng lại có thể bay trên bầu trời?",
+    "options": [
+      "Cá chuồn",
+      "Cánh diều hình con cá",
+      "Cá bay đồ chơi",
+      "Cả 3 phương án trên"
+    ],
+    "answer": 3,
+    "explanation": "Cá chuồn lướt trên sóng, cánh diều và bong bóng cá bay lơ lửng trên trời!"
+  },
+  {
+    "id": 121,
+    "question": "Cái gì có thể cắt đứt được kim loại cứng nhất mà lại vô hình?",
+    "options": [
+      "Tia laser",
+      "Thời gian",
+      "Nước áp lực cao",
+      "Lời nói cay đắng"
+    ],
+    "answer": 1,
+    "explanation": "Thời gian làm rỉ sét và bào mòn mọi kim loại và thành quách kiên cố nhất!"
+  },
+  {
+    "id": 122,
+    "question": "Thứ gì có răng nhưng không có hàm, cắn vào gỗ thì mùn cưa bay tung tóe?",
+    "options": [
+      "Lưỡi cưa",
+      "Lưỡi kéo",
+      "Cái kìm",
+      "Mỏ hàn"
+    ],
+    "answer": 0,
+    "explanation": "Lưỡi cưa có hàng chục chiếc răng cưa sắc bén dùng để xẻ gỗ!"
+  },
+  {
+    "id": 123,
+    "question": "Mỗi ngày ăn một quả gì thì bác sĩ không cần phải đến nhà khám bệnh?",
+    "options": [
+      "Quả táo tây (An apple a day)",
+      "Quả sầu riêng",
+      "Quả mướp đắng",
+      "Quả bưởi"
+    ],
+    "answer": 0,
+    "explanation": "Tục ngữ phương Tây: 'An apple a day keeps the doctor away' (Mỗi ngày một quả táo)!"
+  },
+  {
+    "id": 124,
+    "question": "Đố bạn từ nào trong tiếng Việt có 9 chữ H?",
+    "options": [
+      "Chính phủ",
+      "Chính hiệu",
+      "Hành chính",
+      "Học hành"
+    ],
+    "answer": 1,
+    "explanation": "Chính = 9, Chữ H = hiệu (Chín chữ H)!"
+  },
+  {
+    "id": 125,
+    "question": "Cái gì chứa cả sông ngòi, thành phố, rừng núi nhưng lại không có một giọt nước hay cái cây thật nào?",
+    "options": [
+      "Tấm bản đồ địa lý",
+      "Bức ảnh vệ tinh",
+      "Màn hình máy tính",
+      "Quả địa cầu"
+    ],
+    "answer": 0,
+    "explanation": "Tấm bản đồ vẽ đầy đủ sông hồ, đường sá, núi đồi bằng mực in trên giấy!"
+  },
+  {
+    "id": 126,
+    "question": "Con gì không chân mà leo núi vù vù, không cánh mà bay lượn trên trời?",
+    "options": [
+      "Đám mây",
+      "Con rắn",
+      "Cơn gió",
+      "Dòng suối"
+    ],
+    "answer": 0,
+    "explanation": "Đám mây bay qua đỉnh núi cao chót vót và bồng bềnh khắp bầu trời!"
+  },
+  {
+    "id": 127,
+    "question": "Nếu bạn có một que kem socola trong tay vào ngày hè 40 độ C, bạn phải làm gì nhanh nhất?",
+    "options": [
+      "Ăn ngay kẻo tan chảy",
+      "Bỏ vào túi quần",
+      "Chụp ảnh selfie sống ảo",
+      "Thổi cho nguội"
+    ],
+    "answer": 0,
+    "explanation": "Kem dưới nắng 40 độ tan thành nước trong tích tắc, không ăn ngay là chảy ướt tay!"
+  },
+  {
+    "id": 128,
+    "question": "Cái gì đánh bố, đánh mẹ, đánh anh, đánh chị mà người ta vẫn khen là ngoan?",
+    "options": [
+      "Bàn chải đánh răng",
+      "Cái quạt",
+      "Đánh cờ tướng",
+      "Đánh đàn ghi-ta"
+    ],
+    "answer": 0,
+    "explanation": "Bàn chải đánh răng giúp cả nhà vệ sinh răng miệng sạch sẽ thơm tho!"
+  },
+  {
+    "id": 129,
+    "question": "Thứ gì có thể đi qua cửa kính mà không làm vỡ kính?",
+    "options": [
+      "Ánh sáng mặt trời",
+      "Hòn đá",
+      "Quả bóng",
+      "Cơn gió lốc"
+    ],
+    "answer": 0,
+    "explanation": "Tia sáng xuyên thẳng qua tấm kính trong suốt mà không để lại vết xước nào!"
+  },
+  {
+    "id": 130,
+    "question": "Cái gì bạn có thể phá vỡ mà không cần chạm tay vào hay dùng bất kỳ dụng cụ nào?",
+    "options": [
+      "Lời hứa",
+      "Sự im lặng",
+      "Kỷ lục",
+      "Cả 3 phương án trên"
+    ],
+    "answer": 3,
+    "explanation": "Lời hứa, bầu không khí im lặng hay kỷ lục thi đấu đều bị 'phá vỡ' phi vật lý!"
+  },
+  {
+    "id": 131,
+    "question": "Thứ gì thuộc về bạn, khi bạn ngủ thì nó vẫn làm việc, khi nó ngừng thì bạn 'đi' luôn?",
+    "options": [
+      "Trái tim",
+      "Bộ não",
+      "Chiếc đồng hồ báo thức",
+      "Máy lạnh"
+    ],
+    "answer": 0,
+    "explanation": "Trái tim bơm máu không ngừng nghỉ 24/7 từ lúc sinh ra đến cuối đời!"
+  },
+  {
+    "id": 132,
+    "question": "Ai là người có thể cạo râu hơn 20 lần mỗi ngày mà mặt vẫn rậm rạp râu ria?",
+    "options": [
+      "Thợ cắt tóc / cạo mặt",
+      "Người đàn ông nhiều lông",
+      "Ảo thuật gia",
+      "Diễn viên xiếc"
+    ],
+    "answer": 0,
+    "explanation": "Người thợ cạo râu cạo cho hàng chục khách hàng mỗi ngày, còn râu của anh ta thì giữ nguyên!"
+  },
+  {
+    "id": 133,
+    "question": "Cái gì chứa rất nhiều nước, đứng im một chỗ nhưng người ta lại bảo nó đang sôi sục?",
+    "options": [
+      "Ấm nước đun trên bếp",
+      "Nồi lẩu đang nấu",
+      "Bình thủy điện",
+      "Cả A và B đều đúng"
+    ],
+    "answer": 3,
+    "explanation": "Nước sôi ùng ục 100 độ C bốc hơi nghi ngút trong ấm và nồi lẩu!"
+  },
+  {
+    "id": 134,
+    "question": "Trò chơi dân gian nào càng nhảy lò cò thì càng ghi được nhiều điểm?",
+    "options": [
+      "Nhảy ô ăn quan",
+      "Nhảy dây",
+      "Nhảy bao bố",
+      "Kéo co"
+    ],
+    "answer": 0,
+    "explanation": "Trò chơi nhảy lò cò kẻ ô trên sân đất là trò chơi tuổi thơ quen thuộc!"
+  },
+  {
+    "id": 135,
+    "question": "Có một đàn chim đậu trên cành cây, thợ săn bắn 'đoàng' một phát chết 2 con. Hỏi còn lại mấy con?",
+    "options": [
+      "Không còn con nào",
+      "Còn lại những con chưa chết",
+      "Còn 2 con chết trên cành",
+      "Còn 8 con"
+    ],
+    "answer": 0,
+    "explanation": "Tiếng súng nổ inh tai làm những con còn sống hoảng loạn bay sạch đi mất!"
+  },
+  {
+    "id": 136,
+    "question": "Cái gì bạn có thể ngửi thấy, nếm thấy, nhưng không bao giờ chụp ảnh lại được?",
+    "options": [
+      "Mùi hương và vị ngon của thức ăn",
+      "Bát phở bò",
+      "Cốc trà sữa",
+      "Miếng bánh quy"
+    ],
+    "answer": 0,
+    "explanation": "Máy ảnh chỉ chụp được hình dáng món ăn chứ không thể lưu lại hương vị khứu giác!"
+  },
+  {
+    "id": 137,
+    "question": "Ở Việt Nam, con đường nào dài nhất mà không có bất kỳ chiếc xe cộ nào lưu thông được?",
+    "options": [
+      "Đường mòn Hồ Chí Minh",
+      "Đường xích đạo",
+      "Đường dây điện cao thế",
+      "Đường chân trời"
+    ],
+    "answer": 2,
+    "explanation": "Đường dây điện cao thế 500kV Bắc - Nam dài hàng ngàn km chỉ dẫn điện chứ xe nào chạy lên được!"
+  },
+  {
+    "id": 138,
+    "question": "Cái gì càng gọt vỏ thì lại càng phình to ra?",
+    "options": [
+      "Cái lỗ",
+      "Củ khoai lang",
+      "Quả dưa leo",
+      "Cây bút chì"
+    ],
+    "answer": 0,
+    "explanation": "Càng gọt khoét đất xung quanh miệng lỗ thì cái lỗ càng to ra!"
+  },
+  {
+    "id": 139,
+    "question": "Vật thể nào có 4 chân nhưng không bao giờ bước đi được một bước nào?",
+    "options": [
+      "Cái bàn",
+      "Chiếc ghế",
+      "Cái giường",
+      "Cả 3 phương án trên"
+    ],
+    "answer": 3,
+    "explanation": "Bàn, ghế, giường đều có 4 chân làm giá đỡ cố định trong nhà!"
+  },
+  {
+    "id": 140,
+    "question": "Thứ gì chỉ có giá trị khi nó được thổi phồng lên và sẽ vô dụng nếu bị xì hơi?",
+    "options": [
+      "Quả bóng đá",
+      "Lốp xe máy",
+      "Bánh xe ô tô",
+      "Cả 3 phương án trên"
+    ],
+    "answer": 3,
+    "explanation": "Bóng đá và lốp xe xịt hơi thì xẹp lép không thể thi đấu hay di chuyển được!"
+  },
+  {
+    "id": 141,
+    "question": "Một người đàn ông đi trong mưa bão mà không bị ướt một cọng tóc nào. Tại sao?",
+    "options": [
+      "Anh ta mặc áo mưa kín",
+      "Anh ta cạo trọc đầu",
+      "Anh ta đi trong ô tô",
+      "Cả B và C đều hợp lý"
+    ],
+    "answer": 3,
+    "explanation": "Không có tóc hoặc ngồi trong ô tô thì nước mưa không chạm tới tóc được!"
+  },
+  {
+    "id": 142,
+    "question": "Cái gì bạn cho đi mà vẫn còn nguyên vẹn bên trong cơ thể bạn?",
+    "options": [
+      "Nụ cười",
+      "Lời khuyên",
+      "Tình cảm",
+      "Cả 3 phương án trên"
+    ],
+    "answer": 3,
+    "explanation": "Nụ cười, lời khuyên và tình cảm trao cho người khác thì bạn vẫn giữ trọn trong tim!"
+  },
+  {
+    "id": 143,
+    "question": "Con gì biết đẻ trứng nhưng không bao giờ biết ấp trứng?",
+    "options": [
+      "Con rùa biển",
+      "Con gà mái",
+      "Con chim bồ câu",
+      "Con vịt"
+    ],
+    "answer": 0,
+    "explanation": "Rùa biển đào hố cát đẻ hàng trăm quả trứng rồi vùi cát để ánh nắng tự ấp nở!"
+  },
+  {
+    "id": 144,
+    "question": "Thứ gì chạy quanh khu vườn nhà bạn suốt cả ngày đêm mà không hề di chuyển vị trí?",
+    "options": [
+      "Hàng rào",
+      "Con chó canh cổng",
+      "Dòng nước tưới",
+      "Con ốc sên"
+    ],
+    "answer": 0,
+    "explanation": "Hàng rào bao quanh toàn bộ khu vườn nhưng chôn chặt một chỗ!"
+  },
+  {
+    "id": 145,
+    "question": "Cái gì mềm mại nhất trên thế giới nhưng lại có thể xói mòn cả vách đá hoa cương?",
+    "options": [
+      "Nước lỏng",
+      "Gió thoảng",
+      "Bông gòn",
+      "Khói mây"
+    ],
+    "answer": 0,
+    "explanation": "Thành ngữ 'Nước chảy đá mòn' - sự kiên trì của dòng nước có thể xuyên thủng đá tảng!"
+  },
+  {
+    "id": 146,
+    "question": "Thứ gì có thể kéo dài ra vô tận nhưng nếu buông tay là nó bắn đau điếng?",
+    "options": [
+      "Sợi dây thun",
+      "Sợi dây xích",
+      "Sợi dây thừng",
+      "Sợi chỉ"
+    ],
+    "answer": 0,
+    "explanation": "Dây thun co giãn đàn hồi, kéo căng mà trượt tay thì bắn vào da rát bỏng!"
+  },
+  {
+    "id": 147,
+    "question": "Khi bạn thêm 2 chữ số vào số 11, nó sẽ trở thành số mấy nhỏ hơn cả 11?",
+    "options": [
+      "Số 1",
+      "Số 0",
+      "Số 1.1",
+      "Số -11"
+    ],
+    "answer": 2,
+    "explanation": "Thêm dấu chấm hoặc chia nhỏ ra thành số thập phân!"
+  },
+  {
+    "id": 148,
+    "question": "Cái gì bạn thấy vào ban đêm, biến mất vào ban ngày, nhưng thực tế nó chưa bao giờ rời đi?",
+    "options": [
+      "Các ngôi sao",
+      "Mặt trăng",
+      "Bóng tối",
+      "Cả A và B đều đúng"
+    ],
+    "answer": 3,
+    "explanation": "Sao và Mặt Trăng vẫn ở trên bầu trời ban ngày, nhưng ánh nắng Mặt Trời quá sáng che khuất chúng!"
+  },
+  {
+    "id": 149,
+    "question": "Từ nào mà người nói biết, người nghe biết, nhưng nếu nói ra thì bí mật biến mất?",
+    "options": [
+      "Bí mật",
+      "Lời nói dối",
+      "Chuyện cười",
+      "Tên mật mã"
+    ],
+    "answer": 0,
+    "explanation": "Bí mật mà nói to ra cho người khác nghe thì nó không còn là bí mật nữa!"
+  },
+  {
+    "id": 150,
+    "question": "Cái gì luôn luôn chạy thẳng về phía trước mà không bao giờ quay đầu lại?",
+    "options": [
+      "Thời gian",
+      "Dòng sông",
+      "Mũi tên bắn ra",
+      "Cả 3 phương án trên"
+    ],
+    "answer": 3,
+    "explanation": "Thời gian trôi, nước chảy qua cầu và mũi tên đã bắn không bao giờ quay ngược lại!"
+  },
+  {
+    "id": 151,
+    "question": "Cái gì người nghèo thì có, người giàu thì cần, và nếu bạn ăn nó thì bạn sẽ chết đói?",
+    "options": [
+      "Chẳng có gì cả (Nothing)",
+      "Tiền bạc",
+      "Hạnh phúc",
+      "Cơm thừa"
+    ],
+    "answer": 0,
+    "explanation": "Người nghèo chẳng có gì, người giàu chẳng thiếu gì, nếu chỉ ăn 'chẳng có gì' thì chết đói!"
+  },
+  {
+    "id": 152,
+    "question": "Thứ gì bạn dùng để cắt đồ vật nhưng bản thân nó lại được làm từ 2 lưỡi dao ghép lại?",
+    "options": [
+      "Cây kéo",
+      "Chiếc kìm",
+      "Chiếc cưa",
+      "Lưỡi liềm"
+    ],
+    "answer": 0,
+    "explanation": "Chiếc kéo gồm 2 lưỡi kim loại bắt chéo gắn trục ở giữa!"
+  },
+  {
+    "id": 153,
+    "question": "Con gì biết bơi dưới nước, biết bay lên trời, mà lại biết đi bộ trên cạn?",
+    "options": [
+      "Con vịt",
+      "Con thiên nga",
+      "Con ngỗng",
+      "Cả 3 phương án trên"
+    ],
+    "answer": 3,
+    "explanation": "Họ nhà thủy cầm (vịt, ngỗng, thiên nga) thành thạo cả 3 môn phối hợp bơi, bay và lạch bạch đi bộ!"
+  },
+  {
+    "id": 154,
+    "question": "Cái gì có mặt hình chữ nhật, phát ra ánh sáng xanh và khiến con người dán mắt vào hàng giờ mỗi ngày?",
+    "options": [
+      "Màn hình điện thoại thông minh",
+      "Chiếc gương soi",
+      "Cửa sổ phòng ngủ",
+      "Bức tranh dạ quang"
+    ],
+    "answer": 0,
+    "explanation": "Chiếc smartphone với màn hình cảm ứng lướt TikTok, Facebook thâu đêm suốt sáng!"
+  },
+  {
+    "id": 155,
+    "question": "Thứ gì khi nấu thì cứng lại, để nguội thì vẫn cứng, khác hẳn mọi thức ăn khác?",
+    "options": [
+      "Quả trứng",
+      "Cục đá lạnh",
+      "Thanh socola",
+      "Cục bơ"
+    ],
+    "answer": 0,
+    "explanation": "Lòng trắng và lòng đỏ trứng gà khi luộc nóng đông đặc cứng lại do biến tính protein!"
+  },
+  {
+    "id": 156,
+    "question": "Nếu một người thợ mộc có 10 thanh gỗ, cưa mỗi thanh làm 3 đoạn ngắn, anh ta có tất cả bao nhiêu đoạn gỗ?",
+    "options": [
+      "30 đoạn",
+      "20 đoạn",
+      "10 đoạn",
+      "15 đoạn"
+    ],
+    "answer": 0,
+    "explanation": "10 thanh x 3 đoạn = 30 đoạn gỗ (mỗi thanh chỉ cần cưa 2 nhát)!"
+  },
+  {
+    "id": 157,
+    "question": "Cái gì của con chim mà không có chiếc lông vũ nào?",
+    "options": [
+      "Quả trứng chim",
+      "Mỏ chim",
+      "Đôi chân chim",
+      "Cả 3 phương án trên"
+    ],
+    "answer": 3,
+    "explanation": "Trứng, mỏ và chân chim đều không có lớp lông vũ bao phủ!"
+  },
+  {
+    "id": 158,
+    "question": "Vật gì chứa đầy lỗ thủng li ti nhưng lại ngậm đầy nước bên trong?",
+    "options": [
+      "Miếng bọt biển (mút rửa bát)",
+      "Cái rổ",
+      "Tấm lưới đánh cá",
+      "Cái rá vo gạo"
+    ],
+    "answer": 0,
+    "explanation": "Miếng mút bọt biển xốp rỗng hút và giữ lượng nước gấp nhiều lần trọng lượng của nó!"
+  },
+  {
+    "id": 159,
+    "question": "Cái gì bạn có thể giữ trong miệng nhưng nếu nuốt phải thì nguy hiểm?",
+    "options": [
+      "Chiếc tăm xỉa răng",
+      "Kẹo cao su",
+      "Nước ngọt",
+      "Cả A và B đều đúng"
+    ],
+    "answer": 3,
+    "explanation": "Tăm nhọn và bã kẹo cao su ngậm thì được chứ nuốt vào dạ dày rất nguy hiểm!"
+  },
+  {
+    "id": 160,
+    "question": "Thứ gì bay lên cao khi trời nóng bức và rơi xuống đất khi trời lạnh giá?",
+    "options": [
+      "Hơi nước",
+      "Lá cây",
+      "Cát bụi",
+      "Khói bếp"
+    ],
+    "answer": 0,
+    "explanation": "Nước bốc hơi bay lên tạo mây, gặp không khí lạnh ngưng tụ thành giọt mưa rơi xuống!"
+  },
+  {
+    "id": 161,
+    "question": "Có một cây cầu chịu tải trọng tối đa 10 tấn. Một chiếc xe tải chở hàng đúng 10 tấn chạy qua giữa cầu, có một con chim bồ câu bay đến đậu lên xe. Cầu có sập không?",
+    "options": [
+      "Không sập vì xe đã tiêu hao xăng dầu trên đường đi",
+      "Sập ngay lập tức",
+      "Cầu rung rinh",
+      "Chim quá nặng"
+    ],
+    "answer": 0,
+    "explanation": "Xe tải chạy từ điểm xuất phát tới giữa cầu đã đốt cháy hàng chục lít dầu, trọng lượng giảm đi rất nhiều!"
+  },
+  {
+    "id": 162,
+    "question": "Cái gì có chân nhưng không có cơ thể, có thể giúp bạn với tới những nơi rất cao?",
+    "options": [
+      "Chiếc thang",
+      "Cây gậy",
+      "Cái ghế đẩu",
+      "Cả A và C đều đúng"
+    ],
+    "answer": 3,
+    "explanation": "Cả thang lẫn ghế đẩu đều có chân chịu lực giúp người leo lên cao sơn nhà, thay bóng đèn!"
+  },
+  {
+    "id": 163,
+    "question": "Thứ gì mỗi tháng xuất hiện một lần khiến người lao động vui mừng khôn xiết?",
+    "options": [
+      "Tin nhắn nhận lương",
+      "Hóa đơn tiền điện",
+      "Thông báo họp công ty",
+      "Báo cáo doanh số"
+    ],
+    "answer": 0,
+    "explanation": "Tin nhắn 'Tài khoản quý khách được cộng lương' là âm thanh êm tai nhất mỗi tháng!"
+  },
+  {
+    "id": 164,
+    "question": "Con gì biết sủa gâu gâu nhưng lại chạy bằng pin và biết làm trò nhào lộn?",
+    "options": [
+      "Chó robot thông minh",
+      "Chó pug",
+      "Chó becgie",
+      "Chó cỏ"
+    ],
+    "answer": 0,
+    "explanation": "Chú chó robot điện tử chạy pin sạc có thể nhào lộn và sủa vui tai!"
+  },
+  {
+    "id": 165,
+    "question": "Trái gì có hàng trăm con mắt xung quanh mình, khi gọt phải tỉa mắt từng đường?",
+    "options": [
+      "Trái thơm (dứa)",
+      "Trái mãng cầu",
+      "Trái sầu riêng",
+      "Trái thanh long"
+    ],
+    "answer": 0,
+    "explanation": "Trái dứa (thơm) có rất nhiều mắt dứa xếp thành hàng xoắn ốc xung quanh thân!"
+  },
+  {
+    "id": 166,
+    "question": "Cái gì bạn kéo ra thì dài, thả tay thì ngắn, dùng để đo đạc nhà cửa công trình?",
+    "options": [
+      "Thước cuộn (thước rút)",
+      "Thước kẻ gỗ",
+      "Sợi dây dù",
+      "Thước dây vải"
+    ],
+    "answer": 0,
+    "explanation": "Thước cuộn kim loại có lò xo tự thu ngắn lại khi bấm nút nhả chốt!"
+  },
+  {
+    "id": 167,
+    "question": "Con đường nào trong truyền thuyết dẫn tới Tây Thiên thỉnh kinh của bốn thầy trò Đường Tăng?",
+    "options": [
+      "Tây Du Ký",
+      "Đường tơ lụa",
+      "Đường sang Ấn Độ cổ đại",
+      "Đường lên chùa"
+    ],
+    "answer": 2,
+    "explanation": "Vùng đất Tây Trúc thỉnh chân kinh trong lịch sử chính là đất nước Ấn Độ cổ đại!"
+  },
+  {
+    "id": 168,
+    "question": "Thứ gì có thể bảo vệ cả ngôi nhà bạn khỏi mưa nắng mà không hề có cánh cửa nào?",
+    "options": [
+      "Mái nhà",
+      "Sân trước",
+      "Bức tường gạch",
+      "Cột nhà"
+    ],
+    "answer": 0,
+    "explanation": "Mái nhà che chắn toàn bộ nắng mưa bão bùng từ trên trời dội xuống!"
+  },
+  {
+    "id": 169,
+    "question": "Cái gì bật lên thì sáng choang cả căn phòng, bấm tắt một cái là tối thui như mực?",
+    "options": [
+      "Bóng đèn điện",
+      "Màn hình tivi",
+      "Ngọn nến",
+      "Chiếc đèn pin"
+    ],
+    "answer": 0,
+    "explanation": "Công tắc đèn trần điều khiển dòng điện thắp sáng cả ngôi nhà trong 1 giây!"
+  },
+  {
+    "id": 170,
+    "question": "Thứ gì có thể đóng băng nước thành đá ngay giữa mùa hè oi ả 40 độ?",
+    "options": [
+      "Ngăn đông tủ lạnh",
+      "Quạt hơi nước",
+      "Máy điều hòa không khí",
+      "Bình giữ nhiệt"
+    ],
+    "answer": 0,
+    "explanation": "Ngăn đá tủ lạnh hạ nhiệt độ xuống âm 18 độ C làm đông đá cực nhanh!"
+  },
+  {
+    "id": 171,
+    "question": "Loài cây nào được xem là biểu tượng kiên cường bất khuất của làng quê Việt Nam?",
+    "options": [
+      "Cây tre",
+      "Cây đa",
+      "Cây cau",
+      "Cây bàng"
+    ],
+    "answer": 0,
+    "explanation": "Cây tre Việt Nam thân dẻo dai mọc thành lũy tre kiên cường bảo vệ làng xóm!"
+  },
+  {
+    "id": 172,
+    "question": "Cái gì có thể bay lượn trên trời mà không có động cơ, chỉ cần một làn gió nâng đỡ?",
+    "options": [
+      "Cánh diều",
+      "Khinh khí cầu",
+      "Máy bay giấy",
+      "Cả 3 phương án trên"
+    ],
+    "answer": 3,
+    "explanation": "Diều, máy bay giấy và khinh khí cầu tận dụng sức gió và khí nóng để bay bổng!"
+  },
+  {
+    "id": 173,
+    "question": "Thứ gì giúp người ta nhìn thấy rõ những vật thể tí hon kích thước vi khuẩn mà mắt thường chịu thua?",
+    "options": [
+      "Kính hiển vi",
+      "Kính thiên văn",
+      "Kính lúp",
+      "Kính râm"
+    ],
+    "answer": 0,
+    "explanation": "Kính hiển vi quang học và điện tử phóng đại hình ảnh hàng ngàn đến hàng triệu lần!"
+  },
+  {
+    "id": 174,
+    "question": "Con gì chuyên ăn lá dâu tằm rồi nhả ra sợi tơ óng ả dệt nên lụa quý?",
+    "options": [
+      "Con tằm",
+      "Con nhện",
+      "Con sâu róm",
+      "Con bướm đêm"
+    ],
+    "answer": 0,
+    "explanation": "Con tằm ăn lá dâu nhả tơ làm kén, kén tằm được ươm dệt thành lụa tơ tằm danh tiếng!"
+  },
+  {
+    "id": 175,
+    "question": "Cái gì dùng để thổi cơm dẻo quẹo chỉ với một nút ấn 'Cook' duy nhất?",
+    "options": [
+      "Nồi cơm điện",
+      "Bếp ga",
+      "Lò vi sóng",
+      "Nồi chiên không dầu"
+    ],
+    "answer": 0,
+    "explanation": "Nồi cơm điện tự động nấu chín cơm rồi nhảy sang nút 'Warm' giữ ấm!"
+  },
+  {
+    "id": 176,
+    "question": "Thứ gì giúp bạn rửa sạch dầu mỡ bám trên bát đĩa sau mỗi bữa ăn thịnh soạn?",
+    "options": [
+      "Nước rửa chén",
+      "Nước lã",
+      "Khăn lau khô",
+      "Xà phòng giặt đồ"
+    ],
+    "answer": 0,
+    "explanation": "Nước rửa chén chứa các chất hoạt động bề mặt hòa tan dầu mỡ dễ dàng!"
+  },
+  {
+    "id": 177,
+    "question": "Món ăn nào của Việt Nam được bạn bè quốc tế ca ngợi là 'bánh mì ngon nhất thế giới'?",
+    "options": [
+      "Bánh mì kẹp thịt patê Việt Nam",
+      "Bánh hamburger",
+      "Bánh pizza",
+      "Bánh sandwich"
+    ],
+    "answer": 0,
+    "explanation": "Bánh mì Việt Nam vỏ giòn rụm kẹp patê, chả lụa, dưa leo và rau thơm lừng danh thế giới!"
+  },
+  {
+    "id": 178,
+    "question": "Hành động gì diễn ra mỗi buổi sáng khi chuông báo thức vang lên làm người ta muốn ấn 'Snooze' nhất?",
+    "options": [
+      "Tắt chuông ngủ nướng thêm 5 phút",
+      "Bật dậy tập thể dục ngay",
+      "Uống cốc nước lạnh",
+      "Đọc sách"
+    ],
+    "answer": 0,
+    "explanation": "Ngủ nướng thêm 5 phút buổi sáng là cám dỗ ngọt ngào mà ai cũng từng trải qua!"
+  },
+  {
+    "id": 179,
+    "question": "Cái gì có thể chứa cả bộ sưu tập hàng vạn bài hát mà chỉ nhỏ bằng bao diêm?",
+    "options": [
+      "Chiếc thẻ nhớ MicroSD",
+      "Máy nghe nhạc iPod",
+      "Điện thoại di động",
+      "Cả 3 phương án trên"
+    ],
+    "answer": 3,
+    "explanation": "Thẻ nhớ và chip nhớ hiện đại lưu trữ hàng trăm Gigabyte dữ liệu âm nhạc tiện lợi!"
+  },
+  {
+    "id": 180,
+    "question": "Thứ gì giúp người tham gia giao thông biết khi nào được đi, khi nào phải dừng lại?",
+    "options": [
+      "Cột đèn tín hiệu giao thông",
+      "Vạch kẻ đường",
+      "Biển báo cấm",
+      "Gương cầu lồi"
+    ],
+    "answer": 0,
+    "explanation": "Đèn xanh được đi, đèn vàng đi chậm chuẩn bị dừng, đèn đỏ dừng lại trước vạch!"
+  },
+  {
+    "id": 181,
+    "question": "Loài hoa nào tượng trưng cho sự thanh cao 'gần bùn mà chẳng hôi tanh mùi bùn'?",
+    "options": [
+      "Hoa sen",
+      "Hoa súng",
+      "Hoa mai",
+      "Hoa đào"
+    ],
+    "answer": 0,
+    "explanation": "Hoa sen nở ngát hương thơm giữa đầm lầy bùn đất là quốc hoa biểu tượng Việt Nam!"
+  },
+  {
+    "id": 182,
+    "question": "Cái gì che chở cho đầu bạn khi đi xe máy trên đường, cứu mạng khi có va chạm?",
+    "options": [
+      "Mũ bảo hiểm",
+      "Mũ lưỡi trai",
+      "Mũ len",
+      "Khăn trùm đầu"
+    ],
+    "answer": 0,
+    "explanation": "Mũ bảo hiểm đạt chuẩn hấp thụ xung động va đập bảo vệ an toàn cho não bộ!"
+  },
+  {
+    "id": 183,
+    "question": "Thứ gì phát ra tiếng chuông 'Tùng... tùng... tùng' báo hiệu giờ ra chơi ở các trường học?",
+    "options": [
+      "Trống trường",
+      "Tiếng còi xe",
+      "Tiếng loa phát thanh",
+      "Chuông đồng hồ"
+    ],
+    "answer": 0,
+    "explanation": "Tiếng trống trường giòn giã là âm thanh gắn liền với tuổi học trò thơ ngây!"
+  },
+  {
+    "id": 184,
+    "question": "Món canh giải nhiệt mùa hè quen thuộc nấu từ quả gì có vị đắng nhưng hậu ngọt?",
+    "options": [
+      "Canh khổ qua (mướp đắng) nhồi thịt",
+      "Canh rau ngót",
+      "Canh chua cá lóc",
+      "Canh mồng tơi"
+    ],
+    "answer": 0,
+    "explanation": "Canh khổ qua nhồi thịt bùi bùi đắng nhẹ thanh nhiệt ngày hè cực tốt!"
+  },
+  {
+    "id": 185,
+    "question": "Cái gì giúp bạn lưu giữ lại khoảnh khắc gia đình sum họp chỉ với một tiếng 'Tách'?",
+    "options": [
+      "Chiếc máy ảnh",
+      "Chiếc tivi",
+      "Chiếc quạt máy",
+      "Cái đồng hồ"
+    ],
+    "answer": 0,
+    "explanation": "Máy ảnh và camera điện thoại ghi lại những bức hình kỷ niệm vô giá của gia đình!"
+  },
+  {
+    "id": 186,
+    "question": "Vật dụng nào che mưa che nắng có thể bung xòe ra hình nấm và gập gọn lại bỏ vào balo?",
+    "options": [
+      "Chiếc dù (ô)",
+      "Áo mưa tiện lợi",
+      "Chiếc nón lá",
+      "Tấm bạt che"
+    ],
+    "answer": 0,
+    "explanation": "Chiếc ô gấp bỏ túi mở ra đón gió che mưa che nắng tiện lợi mọi lúc mọi nơi!"
+  },
+  {
+    "id": 187,
+    "question": "Thứ gì thơm phức, nướng trên than hoa ăn kèm bún, rau sống và nước mắm chua ngọt trứ danh Hà Nội?",
+    "options": [
+      "Bún chả",
+      "Bún đậu mắm tôm",
+      "Bún riêu cua",
+      "Bún bò Huế"
+    ],
+    "answer": 0,
+    "explanation": "Bún chả Hà Nội nướng chả giòn thơm nức mũi từng được Tổng thống Obama thưởng thức khen nức nở!"
+  },
+  {
+    "id": 188,
+    "question": "Con gì biết phát ra ánh sáng lập lòe trong đêm tối ở các bụi cây bờ ao?",
+    "options": [
+      "Con đom đóm",
+      "Con ve sầu",
+      "Con dế mèn",
+      "Con bọ rùa"
+    ],
+    "answer": 0,
+    "explanation": "Đom đóm có cơ quan phát quang sinh học ở đuôi phát ánh sáng nhấp nháy trong đêm!"
+  },
+  {
+    "id": 189,
+    "question": "Môn nghệ thuật sân khấu truyền thống độc nhất vô nhị của Việt Nam biểu diễn trên mặt nước?",
+    "options": [
+      "Múa rối nước",
+      "Hát tuồng",
+      "Hát chèo",
+      "Cải lương"
+    ],
+    "answer": 0,
+    "explanation": "Múa rối nước là di sản văn hóa phi vật thể đặc sắc được điều khiển qua làn nước!"
+  },
+  {
+    "id": 190,
+    "question": "Thứ gì bay trên bầu trời đêm Tết phát ra tiếng nổ rực rỡ muôn màu lung linh?",
+    "options": [
+      "Pháo hoa",
+      "Đèn lồng",
+      "Sao băng",
+      "Máy bay trực thăng"
+    ],
+    "answer": 0,
+    "explanation": "Màn pháo hoa rực sáng lung linh chào đón giao thừa đón mừng năm mới an khang!"
+  },
+  {
+    "id": 191,
+    "question": "Trò chơi điện tử nào cho bạn xếp các khối hình rơi từ trên xuống thành từng hàng ngang biến mất?",
+    "options": [
+      "Tetris (Xếp gạch)",
+      "Pacman",
+      "Mario",
+      "Flappy Bird"
+    ],
+    "answer": 0,
+    "explanation": "Tetris là huyền thoại game xếp hình kinh điển nhất lịch sử làng game thế giới!"
+  },
+  {
+    "id": 192,
+    "question": "Thứ gì cắm vào ổ điện giúp sạc đầy pin cho chiếc điện thoại hết pin của bạn?",
+    "options": [
+      "Củ sạc và dây cáp",
+      "Cái phích nước",
+      "Cái quạt bàn",
+      "Chiếc tai nghe"
+    ],
+    "answer": 0,
+    "explanation": "Bộ củ sạc chuyển dòng điện xoay chiều nạp năng lượng cho pin lithium của điện thoại!"
+  },
+  {
+    "id": 193,
+    "question": "Loài động vật nào được mệnh danh là 'Chúa sơn lâm' thống trị rừng xanh hiểm trở?",
+    "options": [
+      "Con hổ (cọp)",
+      "Con hươu",
+      "Con thỏ rừng",
+      "Con gấu ngựa"
+    ],
+    "answer": 0,
+    "explanation": "Con hổ với vằn lông uy dũng và móng vuốt sắc bén là chúa sơn lâm dũng mãnh!"
+  },
+  {
+    "id": 194,
+    "question": "Món ăn vặt đường phố nổi tiếng Sài Gòn trộn từ bánh tráng cắt nhỏ, trứng cút, xoài băm và sa tế?",
+    "options": [
+      "Bánh tráng trộn",
+      "Bánh tráng nướng",
+      "Bột chiên",
+      "Cá viên chiên"
+    ],
+    "answer": 0,
+    "explanation": "Bánh tráng trộn chua chua cay cay đậm đà là món ăn vặt quốc dân của giới trẻ!"
+  },
+  {
+    "id": 195,
+    "question": "Vật dụng nào bảo vệ mắt bạn khỏi ánh nắng chói chang tia cực tím khi ra bãi biển ngày hè?",
+    "options": [
+      "Kính râm (kính mát)",
+      "Kính cận",
+      "Kính bảo hộ lao động",
+      "Kính lúp"
+    ],
+    "answer": 0,
+    "explanation": "Kính râm tráng lớp chống tia UV bảo vệ võng mạc mắt và trông cực ngầu!"
+  },
+  {
+    "id": 196,
+    "question": "Cái gì giúp lưu thông khí lạnh sảng khoái khắp phòng, hạ nhiệt tức thì ngày hè 40 độ?",
+    "options": [
+      "Máy điều hòa không khí",
+      "Cái quạt nan",
+      "Chậu nước đá",
+      "Cửa sổ thông gió"
+    ],
+    "answer": 0,
+    "explanation": "Máy lạnh điều hòa nhiệt độ phòng mát mẻ dễ chịu xua tan cái nóng bức!"
+  },
+  {
+    "id": 197,
+    "question": "Trò chơi minigame 10 người đang chạy trên máy bạn hiện tại có tên là gì?",
+    "options": [
+      "Chiến Trường MarBase",
+      "Kahoot",
+      "Quizizz",
+      "Đấu Trường Sinh Tử"
+    ],
+    "answer": 0,
+    "explanation": "Chiến Trường MarBase - Minigame trắc nghiệm đấu trí, tích nộ và tung 20 kỹ năng siêu bựa!"
+  },
+  {
+    "id": 198,
+    "question": "Trong Chiến Trường MarBase, khi người chơi tích đủ bao nhiêu điểm Nộ thì được tung kỹ năng?",
+    "options": [
+      "3 Nộ",
+      "1 Nộ",
+      "5 Nộ",
+      "10 Nộ"
+    ],
+    "answer": 0,
+    "explanation": "Tích đủ 3 Nộ sẽ kích hoạt giai đoạn tung kỹ năng đảo ngược tình thế trận đấu!"
+  },
+  {
+    "id": 199,
+    "question": "Kỹ năng nào trong Chiến Trường MarBase có khả năng hút 30% điểm số của đối thủ?",
+    "options": [
+      "Bàn Tay Đạo Tặc",
+      "Hoán Đổi Càn Khôn",
+      "Bom Hẹn Giờ",
+      "Đóng Băng Tuyệt Đối"
+    ],
+    "answer": 0,
+    "explanation": "Kỹ năng Bàn Tay Đạo Tặc hút 30% điểm số của mục tiêu để cộng thẳng vào điểm của mình!"
+  },
+  {
+    "id": 200,
+    "question": "Vị trí nào trong phòng chơi MarBase là người bấm bắt đầu trận đấu và chuyển câu hỏi?",
+    "options": [
+      "Host / Chủ phòng",
+      "Người chơi Top 1",
+      "AI Bot",
+      "Khán giả"
+    ],
+    "answer": 0,
+    "explanation": "Host (Chủ phòng / MC) độc lập là người điều hành nhịp độ trận đấu, bấm tiếp câu và mở kết quả!"
   }
 ]

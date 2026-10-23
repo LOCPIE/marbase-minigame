@@ -20,7 +20,7 @@ Game trắc nghiệm tương tác thời gian thực dành cho nhóm lên đến
    - Kỹ năng *Bàn Tay Đạo Tặc*: Hút 30% điểm đối thủ (giới hạn tối đa 100đ).
 
 3. **🏎️ Đường Đua Siêu Tốc (Racetrack):**
-   - Đua xe theo thời gian thực mô phỏng tiến độ điểm số về đích (2000đ).
+   - Đua xe theo thời gian thực mô phỏng tiến độ điểm số và thứ hạng của người chơi.
    - Hiệu ứng nitro, hào quang khiên bảo vệ, đóng băng, bom hẹn giờ và tia năng lượng trực quan.
 
 4. **🌟 Câu Hỏi Vàng & Vòng Sinh Tồn (Sudden Death):**

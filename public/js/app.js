@@ -1341,7 +1341,8 @@ function renderRacetrack(room) {
 
   // 4. Sort players by score for the racetrack lanes
   const sortedPlayers = [...room.players].sort((a, b) => b.score - a.score);
-  const TARGET_SCORE = 2000;
+  const maxScore = Math.max(...room.players.map(p => p.score || 0), 100);
+  const TARGET_SCORE = Math.max((room.totalQuestions || 20) * 75, Math.ceil(maxScore * 1.15));
 
   racetrackLanes.innerHTML = '';
   const VEHICLES = ['🏎️', '🚀', '🏍️', '🛸', '🏎️', '🚀', '🏍️', '🛸', '🏎️', '🚀'];
